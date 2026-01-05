@@ -1,0 +1,26 @@
+// Use variables
+@use "../abstracts/variables";
+
+// ================================
+h1,
+h2,
+h3 {
+    font-family: variables.$font-josefin;
+    font-weight: variables.$fw-bold;
+    line-height: 100%;
+}
+
+h1 {
+    font-size: variables.$fs-h1;
+    color: variables.$color-title;
+}
+
+h2 {
+    font-size: variables.$fs-h2;
+    color: rgba(16, 23, 80, 1);
+}
+h3{
+    font-size: variables.$fs-h3;
+    color: rgba(13, 14, 67, 1);
+}
+

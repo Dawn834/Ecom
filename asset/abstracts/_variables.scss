@@ -1,0 +1,42 @@
+// Font Family
+$font-josefin: "Josefin Sans", sans-serif;
+$font-lato: "Lato", sans-serif;
+// ==================================================
+
+// Font Sizes (Typography scale)
+$fs-h1: 42px;
+$fs-h2: 36px;
+$fs-h3: 34px;
+$fs-body: 16px; // Paragraph
+$fs-small: 14px; // Label, meta
+// ==================================================
+
+// Font Weights
+$fw-regular: 400;
+$fw-medium: 500;
+$fw-semibold: 600;
+$fw-bold: 700;
+// ==================================================
+
+// Text Colors
+$color-title: rgba(21, 24, 117, 1); // Heading
+$color-title-hover: rgba(255, 255, 255, 1);
+$color-muted: rgba(251, 46, 134, 1); // Text phụ, label
+$color-price-old: rgba(251, 36, 72, 1);
+// ==================================================
+
+// Brand Colors
+$color-btn: rgba(251, 46, 134, 1);
+$color-sub-btn: rgba(25, 209, 111, 1);
+// ==================================================
+
+// Background Colors
+$color-bg-top-header: rgba(126, 51, 224, 1);
+$color-bg-main-header: rgba(246, 245, 255, 1); // Section nền tím nhạt
+$color-bg-main-footer: rgba(238, 239, 251, 1);
+$color-bg-bottom-footer: rgba(231, 228, 248, 1);
+$color-bg-card: rgba(246, 247, 251, 1);
+// ==================================================
+
+// Layout
+$container-width: 1177px;
