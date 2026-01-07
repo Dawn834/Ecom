@@ -1,0 +1,22 @@
+// Use variables
+@use "../abstracts/variables" as v;
+
+.btn,
+.sub-btn {
+    font-family: v.$font-josefin;
+    color: v.$color-white;
+    padding: 20px;
+}
+
+.btn {
+    font-weight: v.$fw-semibold;
+    font-size: 17px;
+    letter-spacing: 2%;
+    background-color: v.$color-btn;
+}
+
+.sub-btn {
+    font-weight: v.$fw-medium;
+    font-size: 12px;
+    background-color: v.$color-sub-btn;
+}

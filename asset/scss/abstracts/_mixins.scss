@@ -1,0 +1,13 @@
+@use "../abstracts/variables" as v;
+
+@mixin respond($size) {
+    @if map-has-key($breakpoints, $size) {
+        @media (min-width: map-get($breakpoints, $size)) {
+            @content;
+        }
+    }
+
+    @else {
+        @warn "Breakpoint `#{$size}` không tồn tại. Hãy dùng: #{map-keys($breakpoints)}.";
+    }
+}
