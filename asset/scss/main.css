@@ -421,6 +421,13 @@ h3 {
   color: #999;
 }
 
+button {
+  transition: all ease-out 1s;
+}
+button:hover {
+  transform: scale(1.1);
+}
+
 @media (max-width: 576px) {
   .search-box input {
     width: 150px;
