@@ -203,6 +203,10 @@ h3 {
 .contact-info__item {
   display: flex;
   align-items: center;
+  transition: all ease-in-out 1s;
+}
+.contact-info__item:hover {
+  transform: scale(1.1);
 }
 .contact-info__item-icon {
   margin-right: 10px;
@@ -221,6 +225,11 @@ h3 {
   display: flex;
   align-items: center;
   cursor: pointer;
+  transition: all ease 1s;
+  z-index: 1000;
+}
+.user-actions__item:hover {
+  transform: scale(1.1);
 }
 .user-actions__item svg {
   padding-bottom: 3px;
@@ -232,7 +241,6 @@ h3 {
   min-width: 100px;
   background-color: rgb(246, 245, 255);
   display: none;
-  z-index: 1000;
 }
 .user-actions__item .dropdown-menu__item {
   padding: 8px 5px;
@@ -260,6 +268,10 @@ h3 {
   font-weight: 700;
   display: flex;
   align-items: center;
+  transition: all ease 1s;
+}
+.main-header .logo:hover {
+  transform: scale(1.4);
 }
 .main-header .nav {
   display: flex;
@@ -272,7 +284,11 @@ h3 {
   font-size: 16px;
   font-weight: 400;
   cursor: pointer;
+  transition: all ease 1s;
   position: relative;
+}
+.main-header .nav__item:hover {
+  transform: scale(1.1);
 }
 .main-header .nav__item svg {
   display: inline-block;
