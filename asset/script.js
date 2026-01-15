@@ -1,0 +1,59 @@
+
+document.addEventListener("click", function (e) {
+
+    // CASE 1: CLICK VÀO BUTTON TOGGLE
+    const toggleBtn = e.target.closest(".btn--toggle");
+    if (toggleBtn) {
+        e.preventDefault();
+
+        const targetSelector = toggleBtn.dataset.target;
+        if (!targetSelector) return;
+
+        const targetEl = document.querySelector(targetSelector);
+        if (!targetEl) return;
+
+        const isOpen = targetEl.classList.contains("is-active");
+
+        // Đóng TẤT CẢ dropdown khác (KHÔNG gồm dropdown hiện tại)
+        document
+            .querySelectorAll(".dropdown-menu.is-active")
+            .forEach(function (el) {
+                if (el !== targetEl) {
+                    el.classList.remove("is-active");
+                }
+            });
+
+        // Toggle dropdown hiện tại
+        if (isOpen) {
+            targetEl.classList.remove("is-active");
+        } else {
+            targetEl.classList.add("is-active");
+        }
+
+        return;
+    }
+
+    // CASE 2: CLICK VÀO CLOSE BUTTON
+    const closeBtn = e.target.closest(".close-btn");
+    if (closeBtn) {
+        e.preventDefault();
+
+        const selector = closeBtn.dataset.close;
+        if (!selector) return;
+
+        const target = closeBtn.closest(selector);
+        if (!target) return;
+
+        target.classList.remove("is-active");
+        return;
+    }
+
+
+    // CASE 3: CLICK NGOÀI VÙNG → ĐÓNG DROPDOWN
+    document
+        .querySelectorAll(".dropdown-menu.is-active")
+        .forEach(function (el) {
+            el.classList.remove("is-active");
+        });
+
+});

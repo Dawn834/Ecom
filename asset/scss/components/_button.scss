@@ -10,19 +10,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    @include mixins.hover-bounce;
-
-    &:hover {
-        transform: scale(1.1) rotate(0deg) translate(0px, 0px) skewX(0deg);
-        opacity: 1;
-        filter: brightness(1);
-    }
 }
 
 .btn-p {
     font-weight: v.$fw-semibold;
     font-size: 17px;
-    letter-spacing: 2%;
     background-color: v.$color-btn;
 }
 

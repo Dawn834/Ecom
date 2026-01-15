@@ -24,11 +24,14 @@ $color-title-hover: rgba(255, 255, 255, 1);
 $color-muted: rgba(251, 46, 134, 1); // Text phụ, label
 $color-price-old: rgba(251, 36, 72, 1);
 $color-white: rgba(255, 255, 255, 1);
+$color-sub-text-color: rgba(138, 143, 185, 1);
+
 // ==================================================
 
 // Brand Colors
 $color-btn: rgba(251, 46, 134, 1);
 $color-sub-btn: rgba(25, 209, 111, 1);
+$color-logo: rgba(0, 0, 0, 1);
 // ==================================================
 
 // Background Colors
@@ -37,6 +40,7 @@ $color-bg-main-header: rgba(246, 245, 255, 1); // Section nền tím nhạt
 $color-bg-main-footer: rgba(238, 239, 251, 1);
 $color-bg-bottom-footer: rgba(231, 228, 248, 1);
 $color-bg-card: rgba(246, 247, 251, 1);
+$color-bg-white:rgba(255, 255, 255, 1);
 // ==================================================
 
 // Layout
@@ -46,10 +50,9 @@ $container-width: 1177px;
 $breakpoints-sm: 576px;
 $breakpoints-md: 768px;
 $breakpoints-lg: 991px;
-$breakpoints-xl: 1200px; 
+$breakpoints-xl: 1200px;
 // ==========================================
 
 // Transition / Animation
 $ease-bounce: cubic-bezier(0.68, -0.55, 0.265, 1.55);
 $tr-slow: 0.6s;
-

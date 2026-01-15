@@ -281,66 +281,62 @@
         </div>
 
     </header>
-    <script>
-        document.addEventListener("click", function (e) {
 
-            // CASE 1: CLICK VÀO BUTTON TOGGLE
-            const toggleBtn = e.target.closest(".btn--toggle");
-            if (toggleBtn) {
-                e.preventDefault();
+    <footer>
+        <div class="container footer">
+            <div class="footer__brand">
+                <h2 class="footer__logo">Hekto</h2>
 
-                const targetSelector = toggleBtn.dataset.target;
-                if (!targetSelector) return;
+                <div class="footer__newsletter">
+                    <input placeholder="Enter Email Address" class="footer__newsletter-input" />
+                    <button class="btn btn-p footer__newsletter-btn">Sign Up</button>
+                </div>
 
-                const targetEl = document.querySelector(targetSelector);
-                if (!targetEl) return;
+                <div class="footer__contact">
+                    <p class="footer__contact-title">Contact Info</p>
+                    <p class="footer__contact-text">
+                        17 Princess Road, London, Greater London NW1 8JR, UK
+                    </p>
+                </div>
+            </div>
+            <div class="footer__nav">
+                <div class="footer__nav-group">
+                    <h3 class="footer__nav-title">Categories</h3>
+                    <ul class="footer__nav-list">
+                        <li class="footer__nav-item"><a class="footer__nav-link">Laptops & Computers</a></li>
+                        <li class="footer__nav-item"><a class="footer__nav-link">Camera & Photography</a></li>
+                        <li class="footer__nav-item"><a class="footer__nav-link">Smart Phones & Tablets</a></li>
+                        <li class="footer__nav-item"><a class="footer__nav-link">Video Games & Consoles</a></li>
+                        <li class="footer__nav-item"><a class="footer__nav-link">Waterproof Headphones</a></li>
+                    </ul>
+                </div>
 
-                const isOpen = targetEl.classList.contains("is-active");
+                <div class="footer__nav-group">
+                    <h3 class="footer__nav-title">Customer Care</h3>
+                    <ul class="footer__nav-list">
+                        <li class="footer__nav-item"><a class="footer__nav-link">My Account</a></li>
+                        <li class="footer__nav-item"><a class="footer__nav-link">Discount</a></li>
+                        <li class="footer__nav-item"><a class="footer__nav-link">Returns</a></li>
+                        <li class="footer__nav-item"><a class="footer__nav-link">Orders History</a></li>
+                        <li class="footer__nav-item"><a class="footer__nav-link">Order Tracking</a></li>
+                    </ul>
+                </div>
 
-                // Đóng TẤT CẢ dropdown khác (KHÔNG gồm dropdown hiện tại)
-                document
-                    .querySelectorAll(".dropdown-menu.is-active")
-                    .forEach(function (el) {
-                        if (el !== targetEl) {
-                            el.classList.remove("is-active");
-                        }
-                    });
-
-                // Toggle dropdown hiện tại
-                if (isOpen) {
-                    targetEl.classList.remove("is-active");
-                } else {
-                    targetEl.classList.add("is-active");
-                }
-
-                return;
-            }
-
-            // CASE 2: CLICK VÀO CLOSE BUTTON
-            const closeBtn = e.target.closest(".close-btn");
-            if (closeBtn) {
-                e.preventDefault();
-
-                const selector = closeBtn.dataset.close;
-                if (!selector) return;
-
-                const target = closeBtn.closest(selector);
-                if (!target) return;
-
-                target.classList.remove("is-active");
-                return;
-            }
-
-
-            // CASE 3: CLICK NGOÀI VÙNG → ĐÓNG DROPDOWN
-            document
-                .querySelectorAll(".dropdown-menu.is-active")
-                .forEach(function (el) {
-                    el.classList.remove("is-active");
-                });
-
-        });
-    </script>
+                <div class="footer__nav-group">
+                    <h3 class="footer__nav-title">Pages</h3>
+                    <ul class="footer__nav-list">
+                        <li class="footer__nav-item"><a class="footer__nav-link">Blog</a></li>
+                        <li class="footer__nav-item"><a class="footer__nav-link">Browse the Shop</a></li>
+                        <li class="footer__nav-item"><a class="footer__nav-link">Category</a></li>
+                        <li class="footer__nav-item"><a class="footer__nav-link">Pre-Built Pages</a></li>
+                        <li class="footer__nav-item"><a class="footer__nav-link">Visual Composer Elements</a></li>
+                        <li class="footer__nav-item"><a class="footer__nav-link">WooCommerce Pages</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="./asset/script.js"></script>
 </body>
 
 </html>
