@@ -46,4 +46,10 @@ $container-width: 1177px;
 $breakpoints-sm: 576px;
 $breakpoints-md: 768px;
 $breakpoints-lg: 991px;
-$breakpoints-xl: 1200px; // ==========================================
+$breakpoints-xl: 1200px; 
+// ==========================================
+
+// Transition / Animation
+$ease-bounce: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+$tr-slow: 0.6s;
+

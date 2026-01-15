@@ -1,13 +1,17 @@
 @use "../abstracts/variables" as v;
 
-@mixin respond($size) {
-    @if map-has-key($breakpoints, $size) {
-        @media (min-width: map-get($breakpoints, $size)) {
-            @content;
-        }
-    }
+@mixin hover-bounce(
+    $scale: 1.1,
+    $duration: v.$tr-slow,
+    $ease: v.$ease-bounce,
+    $opacity: 1,
+    $brightness: 1) {
+    transition-property: transform, opacity, filter;
+    transition-duration: $duration;
+    transition-timing-function: $ease;
+    transform: scale(1);
 
-    @else {
-        @warn "Breakpoint `#{$size}` không tồn tại. Hãy dùng: #{map-keys($breakpoints)}.";
-    }
+    filter: brightness(0.95);
+
+    @content; // cho phép custom thêm nếu cần
 }

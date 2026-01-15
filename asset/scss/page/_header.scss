@@ -1,5 +1,6 @@
 // Use variables
 @use "../abstracts/variables" as v;
+@use "../abstracts/mixins" as mixins;
 
 .top-bar {
     background-color: v.$color-bg-top-header;
@@ -19,10 +20,12 @@
     &__item {
         display: flex;
         align-items: center;
-        transition: all ease-in-out 1s;
+        transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
         &:hover {
-            transform: scale(1.1);
+            transform: scale(1.1) rotate(0deg) translate(0px, 0px) skewX(0deg);
+            opacity: 1;
+            filter: brightness(1);
         }
 
         &-icon {
@@ -44,11 +47,33 @@
         display: flex;
         align-items: center;
         cursor: pointer;
-        transition: all ease 1s;
         z-index: 1000;
 
-        &:hover {
-            transform: scale(1.1);
+        .user-actions__trigger {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            // transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            @include mixins.hover-bounce();
+        }
+
+        &:hover .user-actions__trigger {
+            transform: scale(1.1) rotate(0deg) translate(0px, 0px) skewX(0deg);
+            opacity: 1;
+            filter: brightness(1);
+        }
+
+        &:nth-child(3),
+        &:nth-child(4),
+        &:nth-child(5) {
+            // transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            @include mixins.hover-bounce();
+
+            &:hover {
+                transform: scale(1.1) rotate(0deg) translate(0px, 0px) skewX(0deg);
+                opacity: 1;
+                filter: brightness(1);
+            }
         }
 
         svg {
@@ -57,14 +82,14 @@
 
         .dropdown-menu {
             position: absolute;
-            top: 17px;
+            top: 18px;
             color: black;
-            min-width: 100px;
+            min-width: 150px;
             background-color: v.$color-bg-main-header;
             display: none;
 
             &__item {
-                padding: 8px 5px;
+                padding: 15px 10px;
                 cursor: pointer;
                 margin-bottom: 2px;
             }
@@ -87,6 +112,7 @@
         //     }
         // }
     }
+
 }
 
 
@@ -105,10 +131,12 @@
         font-weight: v.$fw-bold;
         display: flex;
         align-items: center;
-        transition: all ease 1s;
+        @include mixins.hover-bounce;
 
         &:hover {
-            transform: scale(1.4);
+            transform: scale(1.1) rotate(0deg) translate(0px, 0px) skewX(0deg);
+            opacity: 1;
+            filter: brightness(1);
         }
     }
 
@@ -123,11 +151,6 @@
             font-size: v.$fs-body;
             font-weight: v.$fw-regular;
             cursor: pointer;
-            transition: all ease 1s;
-
-            &:hover {
-                transform: scale(1.1);
-            }
 
             svg {
                 display: inline-block;
@@ -207,6 +230,13 @@
     border: 1px solid rgba(231, 230, 239, 1);
     position: absolute;
     right: 10px;
+    @include mixins.hover-bounce;
+
+    &:hover {
+        transform: scale(1.1) rotate(0deg) translate(0px, 0px) skewX(0deg);
+        opacity: 1;
+        filter: brightness(1);
+    }
 }
 
 // search popup
@@ -256,6 +286,11 @@
                 bottom: 50%;
                 transform: translateY(50%);
                 right: 10px;
+                cursor: pointer;
+
+                &:hover {
+                    scale: 1.1;
+                }
             }
         }
 
@@ -263,6 +298,16 @@
             display: flex;
             gap: 10px;
             margin-right: 50px;
+
+            .user-actions__item {
+                @include mixins.hover-bounce;
+
+                &:hover {
+                    transform: scale(1.1) rotate(0deg) translate(0px, 0px) skewX(0deg);
+                    opacity: 1;
+                    filter: brightness(1);
+                }
+            }
         }
     }
 
@@ -294,9 +339,10 @@
 }
 
 // btn:hover
-button{
+button {
     transition: all ease-out 1s;
-    &:hover{
+
+    &:hover {
         transform: scale(1.1);
     }
 }
