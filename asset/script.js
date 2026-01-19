@@ -57,3 +57,42 @@ document.addEventListener("click", function (e) {
         });
 
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+    if (typeof Swiper === "undefined") {
+        return;
+    }
+
+    new Swiper(".feature-product", {
+        slidesPerView: 4,
+        spaceBetween: 30,
+        grabCursor: true,
+        watchOverflow: true,
+        pagination: {
+            el: ".feature-product__pagination",
+            clickable: true,
+        },
+        navigation: {
+            nextEl: ".feature-product__nav--next",
+            prevEl: ".feature-product__nav--prev",
+        },
+        breakpoints: {
+            0: {
+                slidesPerView: 1,
+                spaceBetween: 16,
+            },
+            576: {
+                slidesPerView: 2,
+                spaceBetween: 20,
+            },
+            992: {
+                slidesPerView: 3,
+                spaceBetween: 24,
+            },
+            1200: {
+                slidesPerView: 4,
+                spaceBetween: 30,
+            },
+        },
+    });
+});
