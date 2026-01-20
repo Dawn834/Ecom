@@ -264,3 +264,156 @@
 
 
 }
+
+// Leatest Products
+.leatest-product {
+    margin-top: 72px;
+    margin-bottom: 60px;
+    text-align: center;
+
+    .product-tabs {
+        margin-top: 19px;
+        margin-bottom: 58px;
+        display: flex;
+        gap: 58px;
+        justify-content: center;
+        font-size: 18px;
+        font-family: v.$font-lato;
+        color: v.$color-title;
+
+        &__item {
+            cursor: pointer;
+            transition: all 0.3s ease;
+
+            &:hover {
+                text-decoration: underline;
+                color: v.$color-muted;
+            }
+
+            &.active {
+                text-decoration: underline;
+                color: v.$color-muted;
+            }
+        }
+    }
+
+    .product-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 120px 30px;
+
+
+        .grid-item {
+            height: 306px;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+
+            .product-thumbnail {
+                height: 270px;
+                background-color: v.$color-bg-card;
+                cursor: pointer;
+                transition: background 0.3s ease;
+                position: relative;
+
+                &__img {
+                    width: 100%;
+                    height: 100%;
+                    position: relative;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    transition: all 0.25s ease;
+                }
+
+                &__badge {
+                    position: absolute;
+                    top: 20px;
+                    left: 15px;
+                    transform: translate(-200px, -100px);
+                    opacity: 0;
+                    transition: all 0.3s ease;
+                }
+
+                &__actions {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 5px;
+                    position: absolute;
+                    bottom: 15px;
+                    left: 15px;
+                    transform: translate(-200px);
+                    opacity: 0;
+                    transition: all 0.3s ease;
+
+                    .action-btn {
+                        width: 30px;
+                        height: 30px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        border-radius: 50%;
+                        transition: background 0.3s ease;
+
+                        &:hover {
+                            background-color: v.$color-bg-main-footer;
+                        }
+                    }
+
+                }
+
+                &:hover {
+                    background-color: v.$color-bg-white;
+
+                    .product-thumbnail__img {
+                        scale: 0.9;
+                    }
+
+                    .product-thumbnail__badge,
+                    .product-thumbnail__actions {
+                        transform: translateX(0px);
+                        opacity: 1;
+                    }
+                }
+
+            }
+
+            .product-detail {
+                font-family: v.$font-josefin;
+                font-weight: v.$fw-regular;
+                color: v.$color-title;
+                display: flex;
+                justify-content: space-between;
+
+                &__name {
+                    font-size: v.$fs-body;
+                    text-decoration: underline;
+                    text-decoration-thickness: 2px;
+                    /* độ dày gạch */
+                    text-decoration-color: v.$color-bg-main-footer;
+                    /* màu */
+                    text-underline-offset: 10px;
+                    /* cách chữ */
+                }
+
+                &__price {
+                    display: flex;
+                    gap: 9px;
+                    font-size: v.$fs-small;
+
+                    &--old {
+                        color: v.$color-muted;
+                        text-decoration-line: line-through;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:1000px) {
+    .leatest-product {
+        .product-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+}

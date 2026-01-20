@@ -96,3 +96,22 @@ document.addEventListener("DOMContentLoaded", function () {
         },
     });
 });
+
+
+// homepage 
+
+const tabsContainer = document.querySelector(".product-tabs");
+
+tabsContainer.addEventListener("click", (e) => {
+    const tab = e.target.closest(".product-tabs__item");
+    if (!tab) return;
+
+    // remove active khỏi tất cả tab
+    tabsContainer
+        .querySelectorAll(".product-tabs__item")
+        .forEach(item => item.classList.remove("active"));
+
+    // add active cho tab được click
+    tab.classList.add("active");
+});
+
