@@ -21,6 +21,11 @@
     }
 }
 
+.section-title {
+    text-align: center;
+    color: rgba(26, 11, 91, 1);
+}
+
 .feature-product {
     margin-top: 100px;
     position: relative;
@@ -28,9 +33,8 @@
     max-width: 1217px;
 
     .section-title {
-        text-align: center;
         margin-bottom: 48px;
-        color: rgba(26, 11, 91, 1);
+
     }
 
     .swiper-wrapper {
@@ -410,10 +414,99 @@
     }
 }
 
-@media (max-width:1000px) {
+@media (max-width:v.$breakpoints-xl) {
     .leatest-product {
         .product-grid {
             grid-template-columns: repeat(2, 1fr);
         }
     }
+}
+
+@media (max-width:v.$breakpoints-md) {
+    .leatest-product {
+        .product-grid {
+            grid-template-columns: repeat(1, 300px);
+            justify-content: center;
+        }
+
+        .product-tabs {
+            gap: 20px;
+            flex-direction: column;
+
+        }
+    }
+}
+
+@media (max-width:400px) {
+    .leatest-product {
+        .product-grid {
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+
+}
+
+// features
+.features {
+    margin-bottom: 135px;
+    .section-title {
+        margin-bottom: 55px;
+    }
+
+    &-list {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 30px;
+
+        .features-item {
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.12);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 61px;
+            padding-bottom: 45px;
+
+            &__icon {
+                width: 65px;
+                height: 65px;
+                margin-bottom: 22px;
+            }
+
+            &__title {
+                font-size: 22px;
+                font-weight: v.$fw-semibold;
+                line-height: 100%;
+                color: v.$color-title;
+                font-family: v.$font-josefin;
+                margin-bottom: 20px;
+            }
+
+            &__text {
+                max-width: 80%;
+                font-size: v.$fs-body;
+                font-family: v.$font-lato;
+                color: rgba(26, 11, 91, 0.3);
+                line-height: 25.6px;
+                text-align: center;
+
+            }
+        }
+    }
+}
+
+@media (max-width:v.$breakpoints-xl) {
+    .features {
+        &-list {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+}
+
+@media (max-width:v.$breakpoints-sm) {
+    .features {
+        &-list {
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+
 }
