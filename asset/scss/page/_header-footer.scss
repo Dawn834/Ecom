@@ -480,6 +480,8 @@ footer {
                 font-size: 38px;
                 color: v.$color-logo;
                 margin-bottom: 31px;
+                font-family: v.$font-josefin;
+                font-weight: v.$fw-bold;
             }
 
             .footer__newsletter {
@@ -531,6 +533,7 @@ footer {
                 font-weight: v.$fw-semibold;
                 margin-bottom: 42px;
                 color: v.$color-logo;
+                line-height: 100%;
             }
 
             &-list {

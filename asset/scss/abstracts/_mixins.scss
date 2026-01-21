@@ -15,6 +15,14 @@
     @content; // cho phép custom thêm nếu cần
 }
 
-@mixin hover-text {
-    transition: all 0.4s ease;
+@mixin hover-text {}
+
+@mixin transition-regular {
+    transition: all 0.3s ease;
+}
+
+@mixin hover-btn-p {
+    &:hover {
+        background-color: v.$color-bg-btn-p;
+    }
 }
