@@ -26,3 +26,14 @@
         background-color: v.$color-bg-btn-p;
     }
 }
+
+@mixin hover-card {
+    &:hover {
+        scale: 0.9;
+    }
+}
+
+@mixin link-overlay {
+    position: absolute;
+    inset: 0;
+}
