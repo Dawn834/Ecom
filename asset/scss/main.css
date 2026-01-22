@@ -1388,6 +1388,110 @@ footer .footer__nav-list .footer__nav-item:hover {
   text-decoration: line-through;
 }
 
+.discount-tab {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  font: normal 400 18px "Lato", sans-serif;
+  line-height: 100%;
+  color: rgb(21, 24, 117);
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.discount-tab__dot {
+  width: 5px;
+  height: 5px;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+.discount-tab__item {
+  transition: all 0.3s ease;
+}
+.discount-tab__item button {
+  transition: all 0.3s ease;
+}
+.discount-tab__item:hover button {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.discount-tab__item.active {
+  color: rgb(251, 46, 134);
+}
+.discount-tab__item.active button {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.discount-tab__item.active .discount-tab__dot {
+  opacity: 1;
+  color: rgb(251, 46, 134);
+}
+
+.discount-banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.discount-banner__content-title {
+  color: rgb(21, 24, 117);
+  margin-bottom: 16px;
+  line-height: 132%;
+  letter-spacing: 0.015em;
+}
+.discount-banner__content-subtitle {
+  font-family: "Josefin Sans", sans-serif;
+  color: rgb(251, 46, 134);
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 132%;
+  letter-spacing: 0.015em;
+}
+.discount-banner__content-desc {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: rgb(138, 143, 185);
+  line-height: 30px;
+  letter-spacing: 0.02em;
+  margin-bottom: 18px;
+  max-width: 85%;
+}
+.discount-banner__content-features {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  row-gap: 10px;
+}
+.discount-banner__content-features__item {
+  font: normal 400 16px "Josefin Sans", sans-serif;
+  color: rgb(138, 143, 185);
+  line-height: 30px;
+  letter-spacing: 0.02em;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+.discount-banner__content-btn {
+  max-width: 200px;
+  max-height: 57px;
+  border-radius: 2px;
+  font-weight: 400;
+  padding: 20px 48px;
+  margin-top: 37px;
+  transition: all 0.3s ease;
+}
+.discount-banner__content-btn:hover {
+  background-color: rgb(138, 143, 185);
+}
+.discount-banner__media {
+  offset: 1/1;
+}
+.discount-banner__media img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
 @media (max-width: 768px) {
   .product-features__content h3 {
     line-height: 110%;
@@ -1432,6 +1536,9 @@ footer .footer__nav-list .footer__nav-item:hover {
     text-align: center;
     margin-left: 0;
   }
+  .discount-banner {
+    flex-direction: column;
+  }
 }
 @media (max-width: 375px) {
   .product-features--layout {
@@ -1463,7 +1570,7 @@ footer .footer__nav-list .footer__nav-item:hover {
     gap: 5px;
   }
   .product-features__footer .product-features__meta-name {
-    font-size: 14px;
+    font-size: 16px;
   }
   .trending-products__grid {
     grid-template-columns: repeat(1, 1fr);
@@ -1476,5 +1583,27 @@ footer .footer__nav-list .footer__nav-item:hover {
   }
   .trending-products__promos .promos-list__items .promos-item__text-name {
     font-size: 14px;
+  }
+  .discount-tab {
+    font-size: 14px;
+  }
+  .discount-banner__content-title {
+    font-size: 22px;
+  }
+  .discount-banner__content-subtitle {
+    font-size: 16px;
+  }
+  .discount-banner__content-desc {
+    font-size: 14px;
+  }
+  .discount-banner__content-features {
+    grid-template-columns: 1fr;
+  }
+  .discount-banner__content-features__item {
+    font-size: 14px;
+  }
+  .discount-banner__content-features__item svg {
+    width: 12px;
+    height: 7px;
   }
 }/*# sourceMappingURL=main.css.map */

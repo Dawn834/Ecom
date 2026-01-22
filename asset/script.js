@@ -99,19 +99,48 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 // homepage 
-
-const tabsContainer = document.querySelector(".product-tabs");
+// tabs
+const tabsContainer = document.querySelector(".tabs");
 
 tabsContainer.addEventListener("click", (e) => {
-    const tab = e.target.closest(".product-tabs__item");
+    const tab = e.target.closest(".tabs__item");
     if (!tab) return;
 
     // remove active khỏi tất cả tab
     tabsContainer
-        .querySelectorAll(".product-tabs__item")
+        .querySelectorAll(".tabs__item")
         .forEach(item => item.classList.remove("active"));
 
     // add active cho tab được click
     tab.classList.add("active");
 });
+
+// 
+// DISCOUNT TAB (click -> active giống Latest Products)
+const discountTabs = document.querySelector(".discount-tab.tabs");
+
+if (discountTabs) {
+    discountTabs.addEventListener("click", (e) => {
+        // Bạn click vào button hoặc dấu chấm, đều tìm lên .tabs__item
+        const item = e.target.closest(".tabs__item");
+        if (!item || !discountTabs.contains(item)) return;
+
+        // 1) Remove active khỏi tất cả item
+        discountTabs.querySelectorAll(".tabs__item").forEach((el) => {
+            el.classList.remove("active");
+
+            // set aria-selected=false cho button bên trong
+            const btn = el.querySelector('[role="tab"]');
+            if (btn) btn.setAttribute("aria-selected", "false");
+        });
+
+        // 2) Add active cho item vừa click
+        item.classList.add("active");
+
+        // set aria-selected=true cho button bên trong item active
+        const activeBtn = item.querySelector('[role="tab"]');
+        if (activeBtn) activeBtn.setAttribute("aria-selected", "true");
+    });
+}
+
 
