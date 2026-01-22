@@ -98,49 +98,65 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-// homepage 
-// tabs
-const tabsContainer = document.querySelector(".tabs");
+// homepage
 
-tabsContainer.addEventListener("click", (e) => {
-    const tab = e.target.closest(".tabs__item");
-    if (!tab) return;
+// tab js
+function initTabs(tabsElement) {
+    const buttons = tabsElement.querySelectorAll(".js-tab-btn");
+    const items = tabsElement.querySelectorAll(".tabs__item");
+    const scope =
+        tabsElement.closest("[data-tabs-scope]") ||
+        tabsElement.closest("section") ||
+        tabsElement.parentElement ||
+        document;
+    const panels = scope.querySelectorAll(".js-tab-panel");
 
-    // remove active khỏi tất cả tab
-    tabsContainer
-        .querySelectorAll(".tabs__item")
-        .forEach(item => item.classList.remove("active"));
+    if (!buttons.length || !panels.length) return;
 
-    // add active cho tab được click
-    tab.classList.add("active");
-});
-
-// 
-// DISCOUNT TAB (click -> active giống Latest Products)
-const discountTabs = document.querySelector(".discount-tab.tabs");
-
-if (discountTabs) {
-    discountTabs.addEventListener("click", (e) => {
-        // Bạn click vào button hoặc dấu chấm, đều tìm lên .tabs__item
+    tabsElement.addEventListener("click", (e) => {
+        const btn = e.target.closest(".js-tab-btn");
         const item = e.target.closest(".tabs__item");
-        if (!item || !discountTabs.contains(item)) return;
+        if (!btn && !item) return;
+        if (btn && !tabsElement.contains(btn)) return;
+        if (item && !tabsElement.contains(item)) return;
 
-        // 1) Remove active khỏi tất cả item
-        discountTabs.querySelectorAll(".tabs__item").forEach((el) => {
-            el.classList.remove("active");
+        const target = (btn && btn.dataset.tab) || (item && item.dataset.tab);
+        if (!target) return;
 
-            // set aria-selected=false cho button bên trong
-            const btn = el.querySelector('[role="tab"]');
-            if (btn) btn.setAttribute("aria-selected", "false");
+        // remove active khỏi tất cả tabs
+        if (items.length) {
+            items.forEach((item) => item.classList.remove("active"));
+        } else {
+            buttons.forEach((b) => b.classList.remove("active"));
+        }
+
+        buttons.forEach((b) => {
+            if (b.getAttribute("role") === "tab") {
+                b.setAttribute("aria-selected", "false");
+            }
         });
 
-        // 2) Add active cho item vừa click
-        item.classList.add("active");
+        // remove active khỏi tất cả panels
+        panels.forEach((p) => p.classList.remove("active"));
 
-        // set aria-selected=true cho button bên trong item active
-        const activeBtn = item.querySelector('[role="tab"]');
-        if (activeBtn) activeBtn.setAttribute("aria-selected", "true");
+        // add active cho tab hiện tại
+        const activeItem = (btn && btn.closest(".tabs__item")) || item || btn;
+        activeItem.classList.add("active");
+        const activeBtn = btn || activeItem.querySelector(".js-tab-btn");
+        if (activeBtn && activeBtn.getAttribute("role") === "tab") {
+            activeBtn.setAttribute("aria-selected", "true");
+        }
+
+        // add active cho panel tương ứng
+        const panel = scope.querySelector(
+            `.js-tab-panel[data-tab="${target}"]`
+        );
+        if (panel) panel.classList.add("active");
     });
 }
 
-
+document.querySelectorAll(".tabs").forEach((tabsElement) => {
+    if (tabsElement.querySelector(".js-tab-btn")) {
+        initTabs(tabsElement);
+    }
+});

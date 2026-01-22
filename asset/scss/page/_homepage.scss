@@ -421,6 +421,15 @@
             }
         }
     }
+
+    .js-tab-panel{
+        display: none;
+        opacity: 0;
+        &.active{
+            display: block;
+            opacity: 1;
+        }
+    }
 }
 
 @media (max-width:v.$breakpoints-xl) {
@@ -923,6 +932,7 @@
     }
 
     &__item {
+        cursor: pointer;
         button {
             @include mixin.transition-regular();
         }
@@ -954,6 +964,18 @@
         }
     }
 
+}
+
+.discount-section {
+    .js-tab-panel {
+        display: none;
+        opacity: 0;
+    }
+
+    .js-tab-panel.active {
+        display: block;
+        opacity: 1;
+    }
 }
 
 .discount-banner {

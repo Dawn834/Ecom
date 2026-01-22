@@ -1001,6 +1001,22 @@ footer .footer__nav-list .footer__nav-item:hover {
   color: rgb(251, 46, 134);
   text-decoration-line: line-through;
 }
+.leatest-product .js-tab-panel {
+  display: none;
+  opacity: 0;
+}
+.leatest-product .js-tab-panel.active {
+  display: block;
+  opacity: 1;
+}
+.discount-section .js-tab-panel {
+  display: none;
+  opacity: 0;
+}
+.discount-section .js-tab-panel.active {
+  display: block;
+  opacity: 1;
+}
 
 @media (max-width: 1100px) {
   .leatest-product .product-grid {
@@ -1405,6 +1421,7 @@ footer .footer__nav-list .footer__nav-item:hover {
   transition: all 0.3s ease;
 }
 .discount-tab__item {
+  cursor: pointer;
   transition: all 0.3s ease;
 }
 .discount-tab__item button {
