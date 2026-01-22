@@ -1009,14 +1009,6 @@ footer .footer__nav-list .footer__nav-item:hover {
   display: block;
   opacity: 1;
 }
-.discount-section .js-tab-panel {
-  display: none;
-  opacity: 0;
-}
-.discount-section .js-tab-panel.active {
-  display: block;
-  opacity: 1;
-}
 
 @media (max-width: 1100px) {
   .leatest-product .product-grid {
@@ -1443,6 +1435,15 @@ footer .footer__nav-list .footer__nav-item:hover {
   color: rgb(251, 46, 134);
 }
 
+.discount-section .js-tab-panel {
+  display: none;
+  opacity: 0;
+}
+.discount-section .js-tab-panel.active {
+  display: block;
+  opacity: 1;
+}
+
 .discount-banner {
   display: flex;
   justify-content: center;
@@ -1547,6 +1548,9 @@ footer .footer__nav-list .footer__nav-item:hover {
   .trending-products__promos .promos-list__items .promos-item__text {
     text-align: center;
     margin-left: 0;
+  }
+  .discount-banner {
+    flex-direction: column-reverse;
   }
 }
 @media (max-width: 992px) {
