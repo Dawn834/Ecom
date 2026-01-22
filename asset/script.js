@@ -97,9 +97,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-
-// homepage
-
 // tab js
 function initTabs(tabsElement) {
     const buttons = tabsElement.querySelectorAll(".js-tab-btn");
@@ -159,4 +156,34 @@ document.querySelectorAll(".tabs").forEach((tabsElement) => {
     if (tabsElement.querySelector(".js-tab-btn")) {
         initTabs(tabsElement);
     }
+});
+
+// Swiper carousel per view
+var swiper = new Swiper(".mySwiper", {
+    slidesPerView: 4,
+    spaceBetween: 30,
+    watchOverflow: true,
+    grabCursor: true,
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
+    breakpoints: {
+        0: {
+            slidesPerView: 1,
+            spaceBetween: 16,
+        },
+        576: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+        },
+        992: {
+            slidesPerView: 3,
+            spaceBetween: 24,
+        },
+        1200: {
+            slidesPerView: 4,
+            spaceBetween: 30,
+        },
+    },
 });
