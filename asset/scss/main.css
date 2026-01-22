@@ -1492,16 +1492,11 @@ footer .footer__nav-list .footer__nav-item:hover {
      object-fit: contain;
 }
 
-@media (max-width: 768px) {
-  .product-features__content h3 {
-    line-height: 110%;
-    margin-bottom: 15px;
-  }
-  .product-features__footer {
-    margin-top: 15px;
-  }
-  .trending-products__grid {
-    grid-template-columns: repeat(2, 1fr);
+@media (max-width: 1200px) {
+  .trending-products__promos .promos-card__media {
+    width: 40%;
+    right: -50%;
+    bottom: 20%;
   }
   .trending-products__promos .promos-list {
     margin-top: 20px;
@@ -1536,8 +1531,62 @@ footer .footer__nav-list .footer__nav-item:hover {
     text-align: center;
     margin-left: 0;
   }
-  .discount-banner {
+}
+@media (max-width: 992px) {
+  .product-features--layout {
     flex-direction: column;
+  }
+  .product-features__content {
+    width: 100%;
+  }
+  .discount-banner {
+    flex-direction: column-reverse;
+  }
+}
+@media (max-width: 768px) {
+  .product-features__content h3 {
+    line-height: 110%;
+    margin-bottom: 15px;
+  }
+  .product-features__footer {
+    margin-top: 15px;
+  }
+  .trending-products__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .trending-products .promos-card__media {
+    width: 60%;
+    right: -40%;
+  }
+  .trending-products .promos-card.promos-card--lavender .promos-card__media {
+    bottom: 20%;
+    right: 0;
+  }
+  .discount-banner__content-features {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 576px) {
+  .product-features--layout {
+    flex-direction: column;
+  }
+  .product-features__media {
+    width: 80%;
+  }
+  .product-features__content {
+    width: 100%;
+  }
+  .product-features__content h3 {
+    font-size: 22px;
+  }
+  .product-features__text {
+    font-size: 14px;
+  }
+  .product-features__btn {
+    font-size: 14px;
+  }
+  .trending-products__promos .promos-card__badge {
+    font-size: 16px;
   }
 }
 @media (max-width: 375px) {
@@ -1605,5 +1654,11 @@ footer .footer__nav-list .footer__nav-item:hover {
   .discount-banner__content-features__item svg {
     width: 12px;
     height: 7px;
+  }
+  .discount-banner__content-btn {
+    font-size: 14px;
+    padding: 10px 48px;
+    width: -moz-fit-content;
+    width: fit-content;
   }
 }/*# sourceMappingURL=main.css.map */
