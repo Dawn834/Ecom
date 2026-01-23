@@ -1,6 +1,6 @@
 // Use variables
 @use "../abstracts/variables" as v;
-@use "../abstracts/mixins" as mixins;
+@use "../abstracts/mixins" as mixin;
 
 header {
 
@@ -22,12 +22,10 @@ header {
         &__item {
             display: flex;
             align-items: center;
-            transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            @include mixin.transition-regular();
 
             &:hover {
-                transform: scale(1.1) rotate(0deg) translate(0px, 0px) skewX(0deg);
-                opacity: 1;
-                filter: brightness(1);
+                transform: scale(0.95);
             }
 
             &-icon {
@@ -55,26 +53,22 @@ header {
                 display: flex;
                 align-items: center;
                 cursor: pointer;
-                // transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-                @include mixins.hover-bounce();
+                @include mixin.transition-regular();
+
             }
 
             &:hover .user-actions__trigger {
-                transform: scale(1.1) rotate(0deg) translate(0px, 0px) skewX(0deg);
-                opacity: 1;
-                filter: brightness(1);
+                transform: scale(0.95);
             }
 
             &:nth-child(3),
             &:nth-child(4),
             &:nth-child(5) {
-                // transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-                @include mixins.hover-bounce();
+                @include mixin.transition-regular();
 
                 &:hover {
-                    transform: scale(1.1) rotate(0deg) translate(0px, 0px) skewX(0deg);
-                    opacity: 1;
-                    filter: brightness(1);
+                    transform: scale(0.95);
+
                 }
             }
 
@@ -133,13 +127,6 @@ header {
             font-weight: v.$fw-bold;
             display: flex;
             align-items: center;
-            @include mixins.hover-bounce;
-
-            &:hover {
-                transform: scale(1.1) rotate(0deg) translate(0px, 0px) skewX(0deg);
-                opacity: 1;
-                filter: brightness(1);
-            }
         }
 
         .nav {
@@ -214,6 +201,10 @@ header {
                 height: 100%;
                 border: 2px solid rgba(231, 230, 239, 1);
                 border-right: 0;
+
+                &:focus {
+                    outline: none;
+                }
             }
 
             .btn {
@@ -233,12 +224,10 @@ header {
         border: 1px solid rgba(231, 230, 239, 1);
         position: absolute;
         right: 10px;
-        @include mixins.hover-bounce;
+        @include mixin.transition-regular();
 
         &:hover {
-            transform: scale(1.1) rotate(0deg) translate(0px, 0px) skewX(0deg);
-            opacity: 1;
-            filter: brightness(1);
+            background-color: v.$color-bg-card;
         }
     }
 
@@ -290,10 +279,10 @@ header {
                     transform: translateY(50%);
                     right: 10px;
                     cursor: pointer;
-
+                    @include mixin.transition-regular();
                     &:hover {
-                        scale: 1.1;
-                    }
+                        scale: 0.95;
+                    }   
                 }
             }
 
@@ -303,12 +292,10 @@ header {
                 margin-right: 50px;
 
                 .user-actions__item {
-                    @include mixins.hover-bounce;
+                    @include mixin.transition-regular();
 
                     &:hover {
-                        transform: scale(1.1) rotate(0deg) translate(0px, 0px) skewX(0deg);
-                        opacity: 1;
-                        filter: brightness(1);
+                        transform: scale(0.95);
                     }
                 }
             }
@@ -338,15 +325,6 @@ header {
                 color: #999;
 
             }
-        }
-    }
-
-    // btn:hover
-    button {
-        transition: all ease-out 1s;
-
-        &:hover {
-            transform: scale(1.1);
         }
     }
 
@@ -475,6 +453,7 @@ footer {
         justify-content: space-between;
         padding-top: 100px;
         padding-bottom: 80px;
+
         // brands
         &__brand {
             .footer__logo {
@@ -496,13 +475,19 @@ footer {
                 padding-left: 20px;
                 gap: 10px;
                 margin-bottom: 25px;
+
                 &-input {
                     border: none;
                     padding: 2px;
                     flex: 1;
                     min-width: 0;
 
+                    &:focus {
+                        outline: none;
+                    }
+
                     &::placeholder {
+                        padding-left: 10px;
                         color: v.$color-sub-text-color;
 
                     }
@@ -517,8 +502,9 @@ footer {
                     font-size: 16px;
                 }
             }
-            .footer__contact{
-                &-title{
+
+            .footer__contact {
+                &-title {
                     margin-bottom: 10px;
                 }
             }
@@ -541,8 +527,9 @@ footer {
                 .footer__nav-item {
                     margin: 21px 0;
                     cursor: pointer;
-                    @include mixins.hover-text();
-                    &:hover{
+                    @include mixin.transition-regular();
+
+                    &:hover {
                         color: v.$color-muted;
                     }
                 }
@@ -552,24 +539,38 @@ footer {
 
     // responsive footer
     @media (max-width:1200px) {
-        .footer{
+        .footer {
             flex-direction: column;
             gap: 50px;
-            &__nav{
+
+            &__nav {
                 justify-content: space-between;
                 gap: 10px;
             }
         }
     }
+
     @media (max-width:576px) {
-        .footer{
-            font-size: v.$fs-small;
-            &__nav{
-                &-title{
-                    font-size: 18px;
+        header {
+            .search-overlay {
+                .search-popup {
+                    &__box {
+                        width: 80%;
+                    }
                 }
             }
         }
-        
+
+        .footer {
+            font-size: v.$fs-small;
+
+            &__nav {
+                &-title {
+                    font-size: 18px;
+                }
+            }
+
+        }
+
     }
 }
