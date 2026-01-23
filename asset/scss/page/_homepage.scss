@@ -3,20 +3,62 @@
 
 .hero-slider {
     background-color: v.$color-bg-hero-silder ;
+    height: 764px;
+    @include mixin.transition-regular();
 
     &__track {
         display: flex;
+        position: relative;
         align-items: center;
+        height: 100%;
+        position: relative;
+        overflow: hidden;
+        background-image: url(/asset/img/homepage/hero-slider/Group-cta.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+
+        .hero-content {
+            max-width: 664px;
+
+            &__subtitle {
+                font: v.$fw-bold v.$fs-body v.$font-lato;
+                color: v.$color-muted;
+                line-height: 28px;
+                margin-bottom: 12px;
+                @include mixin.transition-regular();
+            }
+
+            &__title {
+                font: v.$fw-bold 53px v.$font-josefin;
+                line-height: 132%;
+                letter-spacing: 0.015em;
+                margin-bottom: 12px;
+                @include mixin.transition-regular();
+
+            }
+
+            &__text {
+                font: v.$fw-bold v.$fs-body v.$font-josefin;
+                line-height: 28px;
+                color: v.$color-sub-text-color;
+                margin-bottom: 30px;
+                @include mixin.transition-regular();
+
+            }
+
+            &__btn {
+                display: inline-block;
+                padding: 17px 40px;
+                @include mixin.transition-regular();
+                @include mixin.hover-btn-p();
+            }
+        }
 
         .hero-img {
-            position: relative;
-
-            // hero-slide right
-            .hero-slide__img {
-                position: absolute;
-                width: 629px;
-                height: 629px;
-            }
+            position: absolute;
+            right: 15%;
+            top: 40px;
         }
     }
 }
@@ -1256,7 +1298,7 @@
                 margin-top: 31px;
                 margin-bottom: 17px;
                 @include mixin.transition-regular();
-
+                display: inline-block;
             }
         }
 
@@ -1279,6 +1321,40 @@
     }
 
 }
+
+@media (max-width:1840px) {
+    .hero-slider {
+        &__track {
+            background-image: url(/asset/img/homepage/hero-slider/Group-131.png);
+
+            .hero-content {
+                &__title {
+                    font-size: v.$fs-h2;
+                }
+
+                &__text {
+                    width: 80%;
+                }
+            }
+        }
+    }
+
+}
+
+@media (max-width: 1400px) {
+    .hero-slider {
+        height: fit-content;
+
+        &__track {
+            .hero-content {
+                margin-top: 50px;
+                margin-bottom: 50px;
+            }
+        }
+    }
+
+}
+
 
 @media (max-width: 1200px) {
 
@@ -1363,9 +1439,24 @@
     }
 
     // leatest-blog section
-    .leatest-blog{
-        &__grid{
+    .leatest-blog {
+        &__grid {
             flex-direction: column;
+        }
+    }
+
+    // hero slide section
+    .hero-slider {
+        &__track {
+            .hero-content {
+                max-width: 500px;
+                &__title{
+                    font-size: 30px;
+                }
+                &__text{
+                    font-size: v.$fs-small;
+                }
+            }
         }
     }
 }
@@ -1420,6 +1511,19 @@
             }
         }
 
+    }
+
+    .hero-slider{
+        &__track{
+            background-image: none;
+            justify-content: center;
+            text-align: center;
+            .hero-content{
+                &__text {
+                    width: 100%;
+                }
+            }
+        }
     }
 }
 
@@ -1595,5 +1699,29 @@
             }
         }
 
+    }
+
+    //hero slide section
+
+    .hero-slider{
+        &__track{
+            .hero-content{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                &__title{
+                    font-size: v.$fs-h4;
+                }
+                &__text{
+                    width: 80%;
+                    font-size: 10px;
+                    line-height: 100%;
+                }
+                &__btn{
+                    padding: 10px 20px;
+                    font-size: 14px;
+                }
+            }
+        }
     }
 }

@@ -286,30 +286,28 @@
     <main>
         <!-- hero slide -->
         <section class="hero-slider">
-            <div class="container hero-slider__track">
-                <article class="hero-content">
-                    <img class="hero-content__lamp" src="lamp.png" alt="" />
+            <div class="hero-slider__track">
+                <div class="container">
+                    <article class="hero-content">
+                        <!-- <img class="hero-content__lamp" src="./asset/img/homepage/hero-slider/image-32.png" alt="" /> -->
 
-                    <p class="hero-content__subtitle">Best Furniture For Your Castle...</p>
-                    <p class="hero-content__title">
-                        New Furniture Collection <br />
-                        Trends in 2020
-                    </p>
-                    <p class="hero-content__text">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Magna in est adipiscing
-                        in phasellus non in justo.
-                    </p>
+                        <p class="hero-content__subtitle">Best Furniture For Your Castle...</p>
+                        <p class="hero-content__title">
+                            New Furniture Collection <br />
+                            Trends in 2020
+                        </p>
+                        <p class="hero-content__text">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Magna in est adipiscing
+                            in phasellus non in justo.
+                        </p>
+                        <a class="hero-content__btn btn btn-p" href="#">Shop Now</a>
+                    </article>
+                </div>
 
-                    <a class="hero__btn" href="#">Shop Now</a>
-                </article>
-                <article class="hero-img">
-                    <div class="hero-img__ring"></div>
-
-                    <div class="hero-img__badge">50%<br />off</div>
-                    <img class="hero-img__img"
-                        src="./asset/img/homepage/hero-slider/Shell-Shaped-Armchair-Pink-Velvet-Fabric-One-Seater-Sofa-for-Living-Room 1.png"
+                <!-- <article class="hero-img">
+                    <img class="hero-img__img" src="./asset/img/homepage/hero-slider/sofa-promotional-header.png"
                         alt="Chair" />
-                </article>
+                </article> -->
             </div>
         </section>
 
@@ -2888,6 +2886,9 @@
 
             <div class="js-tab-panel" data-tab="plastic-chair">
                 <div class="discount-banner container">
+                    <div class="discount-banner__media">
+                        <img src="./asset/img/homepage/discount-img.png" alt="">
+                    </div>
                     <div class="discount-banner__content">
                         <h3 class="discount-banner__content-title">
                             20% Discount Of All Products
@@ -2933,9 +2934,7 @@
                             Shop Now
                         </a>
                     </div>
-                    <div class="discount-banner__media">
-                        <img src="./asset/img/homepage/discount-img.png" alt="">
-                    </div>
+
                 </div>
             </div>
 
@@ -3325,7 +3324,7 @@
                 <a href="./homepage.html" class="footer__logo">Hekto</a>
 
                 <div class="footer__newsletter">
-                    <input placeholder="Enter Email Address" class="footer__newsletter-input" />
+                    <input type="text" placeholder="Enter Email Address" class="footer__newsletter-input" />
                     <button class="btn btn-p footer__newsletter-btn">Sign Up</button>
                 </div>
 
@@ -3340,34 +3339,37 @@
                 <div class="footer__nav-group">
                     <h4 class="footer__nav-title">Categories</h4>
                     <ul class="footer__nav-list">
-                        <li class="footer__nav-item"><a class="footer__nav-link">Laptops & Computers</a></li>
-                        <li class="footer__nav-item"><a class="footer__nav-link">Camera & Photography</a></li>
-                        <li class="footer__nav-item"><a class="footer__nav-link">Smart Phones & Tablets</a></li>
-                        <li class="footer__nav-item"><a class="footer__nav-link">Video Games & Consoles</a></li>
-                        <li class="footer__nav-item"><a class="footer__nav-link">Waterproof Headphones</a></li>
+                        <li class="footer__nav-item"><a href="#" class="footer__nav-link">Laptops & Computers</a></li>
+                        <li class="footer__nav-item"><a href="#" class="footer__nav-link">Camera & Photography</a></li>
+                        <li class="footer__nav-item"><a href="#" class="footer__nav-link">Smart Phones & Tablets</a>
+                        </li>
+                        <li class="footer__nav-item"><a href="#" class="footer__nav-link">Video Games & Consoles</a>
+                        </li>
+                        <li class="footer__nav-item"><a href="#" class="footer__nav-link">Waterproof Headphones</a></li>
                     </ul>
                 </div>
 
                 <div class="footer__nav-group">
                     <h4 class="footer__nav-title">Customer Care</h4>
                     <ul class="footer__nav-list">
-                        <li class="footer__nav-item"><a class="footer__nav-link">My Account</a></li>
-                        <li class="footer__nav-item"><a class="footer__nav-link">Discount</a></li>
-                        <li class="footer__nav-item"><a class="footer__nav-link">Returns</a></li>
-                        <li class="footer__nav-item"><a class="footer__nav-link">Orders History</a></li>
-                        <li class="footer__nav-item"><a class="footer__nav-link">Order Tracking</a></li>
+                        <li class="footer__nav-item"><a href="#" class="footer__nav-link">My Account</a></li>
+                        <li class="footer__nav-item"><a href="#" class="footer__nav-link">Discount</a></li>
+                        <li class="footer__nav-item"><a href="#" class="footer__nav-link">Returns</a></li>
+                        <li class="footer__nav-item"><a href="#" class="footer__nav-link">Orders History</a></li>
+                        <li class="footer__nav-item"><a href="#" class="footer__nav-link">Order Tracking</a></li>
                     </ul>
                 </div>
 
                 <div class="footer__nav-group">
                     <h4 class="footer__nav-title">Pages</h4>
                     <ul class="footer__nav-list">
-                        <li class="footer__nav-item"><a class="footer__nav-link">Blog</a></li>
-                        <li class="footer__nav-item"><a class="footer__nav-link">Browse the Shop</a></li>
-                        <li class="footer__nav-item"><a class="footer__nav-link">Category</a></li>
-                        <li class="footer__nav-item"><a class="footer__nav-link">Pre-Built Pages</a></li>
-                        <li class="footer__nav-item"><a class="footer__nav-link">Visual Composer Elements</a></li>
-                        <li class="footer__nav-item"><a class="footer__nav-link">WooCommerce Pages</a></li>
+                        <li class="footer__nav-item"><a href="#" class="footer__nav-link">Blog</a></li>
+                        <li class="footer__nav-item"><a href="#" class="footer__nav-link">Browse the Shop</a></li>
+                        <li class="footer__nav-item"><a href="#" class="footer__nav-link">Category</a></li>
+                        <li class="footer__nav-item"><a href="#" class="footer__nav-link">Pre-Built Pages</a></li>
+                        <li class="footer__nav-item"><a href="#" class="footer__nav-link">Visual Composer Elements</a>
+                        </li>
+                        <li class="footer__nav-item"><a href="#" class="footer__nav-link">WooCommerce Pages</a></li>
                     </ul>
                 </div>
             </div>
