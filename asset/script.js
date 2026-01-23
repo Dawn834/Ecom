@@ -159,7 +159,7 @@ document.querySelectorAll(".tabs").forEach((tabsElement) => {
 });
 
 // Swiper carousel per view
-var swiper = new Swiper(".mySwiper", {
+var swiper = new Swiper(".mySwiper-per-view", {
     slidesPerView: 4,
     spaceBetween: 30,
     watchOverflow: true,
@@ -187,3 +187,10 @@ var swiper = new Swiper(".mySwiper", {
         },
     },
 });
+
+// 1 view
+var swiper = new Swiper(".mySwiper-1view", {
+        pagination: {
+          el: ".swiper-pagination",
+        },
+      });
