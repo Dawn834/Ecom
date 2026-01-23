@@ -1,0 +1,11 @@
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins" as mixin;
+
+#grid-default{
+.page-header{
+    @include mixin.page-header();
+}
+
+
+
+}

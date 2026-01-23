@@ -37,3 +37,30 @@
     position: absolute;
     inset: 0;
 }
+
+@mixin page-header {
+    background-color: v.$color-bg-main-header;
+    height: 286px;
+    display: flex;
+    align-items: center;
+
+    &__title {
+        color: rgba(16, 23, 80, 1);
+        line-height: 100%;
+        margin-bottom: 10px;
+    }
+
+    &__breadcrumb {
+        gap: 5px;
+        display: flex;
+
+        &-link {
+            font: v.$fw-medium v.$fs-body v.$font-lato;
+            line-height: 100%;
+        }
+
+        &-link.active {
+            color: v.$color-muted;
+        }
+    }
+}
