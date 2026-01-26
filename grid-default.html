@@ -297,15 +297,41 @@
         </section>
 
         <!-- toolbar -->
-        <section class="catalog-toolbar">
-            <p class="catalog-toolbar__summary">Ecommerce Accessories & Fashion item</p>
+        <section class="catalog-toolbar container">
+            <!-- Left -->
+            <div class="catalog-toolbar__left">
+                <h4 class="catalog-toolbar__left-title">Ecommerce Accessories &amp; Fashion item</h4>
+                <p class="catalog-toolbar__left-meta">About 9,620 results (0.62 seconds)</p>
+            </div>
 
-            <div class="catalog-toolbar__controls">
-                <div class="catalog-toolbar__control catalog-toolbar__control--sort">...</div>
-                <div class="catalog-toolbar__control catalog-toolbar__control--per-page">...</div>
-                <div class="catalog-toolbar__control catalog-toolbar__control--view">...</div>
+            <!-- Right -->
+            <div class="catalog-toolbar__right" aria-label="Catalog controls">
+                <div class="catalog-toolbar__field">
+                    <label class="catalog-toolbar__label" for="perPage">Per Page:</label>
+                    <input class="catalog-toolbar__input" id="perPage" type="number" min="1" value="3" />
+                </div>
+
+                <div class="catalog-toolbar__field">
+                    <label class="catalog-toolbar__label">Sort By:</label>
+
+                    <div class="dropdown">
+                        <button class="dropdown__btn catalog-toolbar__select">Danh mục <svg width="12" height="12"
+                                viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M2 4.5L6 8.5L10 4.5" stroke="#8A8FB9" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </button>
+
+                        <div class="dropdown__menu">
+                            <a class="dropdown__item" href="#">Option 1</a>
+                            <a class="dropdown__item" href="#">Option 2</a>
+                            <a class="dropdown__item" href="#">Option 3</a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
+
 
         <!-- grid product -->
         <section class="product-grid">

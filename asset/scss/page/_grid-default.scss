@@ -6,6 +6,10 @@
     @include mixin.page-header();
 }
 
+.catalog-toolbar{
+    @include mixin.catalog-toolbar();
+    @include mixin.dropdown();
+}
 
 
 }

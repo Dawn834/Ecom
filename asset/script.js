@@ -58,6 +58,9 @@ document.addEventListener("click", function (e) {
 
 });
 
+
+
+
 document.addEventListener("DOMContentLoaded", function () {
     if (typeof Swiper === "undefined") {
         return;
@@ -190,7 +193,8 @@ var swiper = new Swiper(".mySwiper-per-view", {
 
 // 1 view
 var swiper = new Swiper(".mySwiper-1view", {
-        pagination: {
-          el: ".swiper-pagination",
-        },
-      });
+    pagination: {
+        el: ".swiper-pagination",
+    },
+});
+

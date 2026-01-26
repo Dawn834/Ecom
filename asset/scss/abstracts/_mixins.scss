@@ -64,3 +64,109 @@
         }
     }
 }
+
+@mixin catalog-toolbar {
+    margin-top: 124px;
+    margin-bottom: 144px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__left {
+        &-meta {
+            font: v.$fw-regular 12px v.$font-lato;
+            line-height: 100%;
+            margin-top: 10px;
+        }
+    }
+
+    &__right {
+        display: flex;
+        gap: 30px;
+        align-items: center;
+    }
+
+    &__label {
+        margin-right: 10px;
+        font: v.$fw-regular v.$fs-body v.$font-lato;
+        line-height: 100%;
+        color: v.$color-title;
+    }
+
+    &__input {
+        height: 25px;
+        max-width: 55px;
+        border: 1px solid rgba(231, 230, 239, 1);
+        color: v.$color-sub-text-color;
+        font: v.$fw-regular 12px v.$font-lato ;
+        display: flex;
+        align-items: center;
+    }
+
+    &__select {
+        padding-left: 10px;
+        width: 96px;
+        height: 28px;
+        border: 1px solid rgba(231, 230, 239, 1);
+        color: v.$color-sub-text-color;
+        font: v.$fw-regular 12px v.$font-lato ;
+        line-height: 18px;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+
+    }
+
+    &__field {
+        display: flex;
+        align-items: center;
+
+        .dropbtn {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+    }
+
+    @media (max-width:992px) {
+        flex-direction: column;
+        gap: 15px;
+        &__left{
+        text-align: center;
+        }
+    }
+    @media (max-width:576px) {
+        &__left{
+            &-title{
+                font-size: v.$fs-body;
+            }
+            &-meta{
+                font-size: 12px;
+            }
+        }
+        &__label{
+            font-size: v.$fs-small;
+        }
+        
+    }
+
+}
+
+
+@mixin dropdown {
+
+    .dropdown__menu {
+        display: none;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(8px);
+        transition: 0.25s ease;
+    }
+
+    .dropdown.active .dropdown__menu {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+
+}

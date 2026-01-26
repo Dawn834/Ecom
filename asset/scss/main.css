@@ -140,7 +140,8 @@ h6 {
 
 h1,
 h2,
-h3 {
+h3,
+h4 {
   font-family: "Josefin Sans", sans-serif;
   font-weight: 700;
   line-height: 100%;
@@ -159,6 +160,11 @@ h2 {
 h3 {
   font-size: 35px;
   color: rgb(13, 14, 67);
+}
+
+h4 {
+  font-size: 22px;
+  color: rgb(21, 24, 117);
 }
 
 /* ===== COMPONENTS ===== */
@@ -639,9 +645,8 @@ footer .footer__nav-list .footer__nav-item:hover {
   position: relative;
   align-items: center;
   height: 100%;
-  position: relative;
   overflow: hidden;
-  background-image: url(/asset/img/homepage/hero-slider/Group-cta.png);
+  background-image: url(/asset/img/homepage/hero-slider/image-32.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -1978,4 +1983,89 @@ footer .footer__nav-list .footer__nav-item:hover {
 }
 #grid-default .page-header__breadcrumb-link.active {
   color: rgb(251, 46, 134);
+}
+#grid-default .catalog-toolbar {
+  margin-top: 124px;
+  margin-bottom: 144px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#grid-default .catalog-toolbar__left-meta {
+  font: 400 12px "Lato", sans-serif;
+  line-height: 100%;
+  margin-top: 10px;
+}
+#grid-default .catalog-toolbar__right {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+#grid-default .catalog-toolbar__label {
+  margin-right: 10px;
+  font: 400 16px "Lato", sans-serif;
+  line-height: 100%;
+  color: rgb(21, 24, 117);
+}
+#grid-default .catalog-toolbar__input {
+  height: 25px;
+  max-width: 55px;
+  border: 1px solid rgb(231, 230, 239);
+  color: rgb(138, 143, 185);
+  font: 400 12px "Lato", sans-serif;
+  display: flex;
+  align-items: center;
+}
+#grid-default .catalog-toolbar__select {
+  padding-left: 10px;
+  width: 96px;
+  height: 28px;
+  border: 1px solid rgb(231, 230, 239);
+  color: rgb(138, 143, 185);
+  font: 400 12px "Lato", sans-serif;
+  line-height: 18px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+#grid-default .catalog-toolbar__field {
+  display: flex;
+  align-items: center;
+}
+#grid-default .catalog-toolbar__field .dropbtn {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+@media (max-width: 992px) {
+  #grid-default .catalog-toolbar {
+    flex-direction: column;
+    gap: 15px;
+  }
+  #grid-default .catalog-toolbar__left {
+    text-align: center;
+  }
+}
+@media (max-width: 576px) {
+  #grid-default .catalog-toolbar__left-title {
+    font-size: 16px;
+  }
+  #grid-default .catalog-toolbar__left-meta {
+    font-size: 12px;
+  }
+  #grid-default .catalog-toolbar__label {
+    font-size: 14px;
+  }
+}
+#grid-default .catalog-toolbar .dropdown__menu {
+  display: none;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(8px);
+  transition: 0.25s ease;
+}
+#grid-default .catalog-toolbar .dropdown.active .dropdown__menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
 }/*# sourceMappingURL=main.css.map */
