@@ -59,6 +59,48 @@ document.addEventListener("click", function (e) {
 });
 
 
+// dropdown 
+document.addEventListener('click', (e) => {
+    const btn = e.target.closest(".dropdown__btn");
+    const dropdown = e.target.closest(".dropdown");
+
+    if (btn) {
+        const currentdropdown = btn.closest(".dropdown");
+
+        // close dropdown
+        document.querySelectorAll(".dropdown.active").forEach(d => {
+            if (d !== currentdropdown) {
+                d.classList.remove("active");
+            }
+        });
+        // toggle dropdown
+        currentdropdown.classList.toggle("active");
+        return;
+    }
+
+    // close dropdown click
+    const item = e.target.closest(".dropdown__item");
+    if (item) {
+        const parentdropdown = item.closest(".dropdown");
+        parentdropdown.classList.remove("active");
+        return;
+    }
+
+    // click overlay close dropdown
+    if (!dropdown)
+        document.querySelectorAll(".dropdown.active").forEach(d => {
+            d.classList.remove("active")
+        });
+
+    // click esc --> close dropdown
+    document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") {
+            document.querySelectorAll(".dropdown.active").forEach(d => {
+                d.classList.remove("active");
+            });
+        }
+    });
+});
 
 
 document.addEventListener("DOMContentLoaded", function () {

@@ -126,7 +126,7 @@
             align-items: center;
             gap: 5px;
         }
-    }
+    } 
 
     @media (max-width:992px) {
         flex-direction: column;
@@ -154,16 +154,30 @@
 
 
 @mixin dropdown {
-
+    .dropdown{
+        position: relative;
+    }
     .dropdown__menu {
         display: none;
         opacity: 0;
         visibility: hidden;
+        position: absolute;
         transform: translateY(8px);
-        transition: 0.25s ease;
+        background-color: v.$color-bg-card;
+        width: 100%;
+    }
+    .dropdown__item{
+        padding: 10px;
+        font: v.$fw-regular v.$fs-body v.$font-lato;
+        cursor: pointer;
+        &:hover{
+            background-color: v.$color-bg-white;
+        }
     }
 
     .dropdown.active .dropdown__menu {
+        display: flex;
+        flex-direction: column;
         opacity: 1;
         visibility: visible;
         transform: translateY(0);

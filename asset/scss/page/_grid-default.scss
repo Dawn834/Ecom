@@ -1,15 +1,155 @@
 @use "../abstracts/variables" as v;
 @use "../abstracts/mixins" as mixin;
 
-#grid-default{
-.page-header{
-    @include mixin.page-header();
-}
+#grid-default {
+    .page-header {
+        @include mixin.page-header();
+    }
 
-.catalog-toolbar{
-    @include mixin.catalog-toolbar();
-    @include mixin.dropdown();
-}
+    .catalog-toolbar {
+        @include mixin.catalog-toolbar();
+        @include mixin.dropdown();
+    }
+
+    .product-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 53px 81px;
+
+        .product-card {
+            &__media {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                aspect-ratio: calc(270/280);
+                background-color: v.$color-bg-card;
+                position: relative;
+                cursor: pointer;
+                @include mixin.transition-regular();
+
+            }
+
+            &__actions {
+                position: absolute;
+                display: flex;
+                flex-direction: column;
+                bottom: 20px;
+                left: 10px;
+                opacity: 0;
+                @include mixin.transition-regular();
+            }
+
+            &:hover .product-card__media {
+                background-color: rgba(235, 244, 243, 1);
+            }
+
+            &:hover .product-card__actions {
+                opacity: 1;
+            }
+
+            &:hover .product-card__img {
+                transform: scale(0.9);
+            }
+
+            &__action {
+                width: 30px;
+                height: 30px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 50%;
+                @include mixin.transition-regular();
+
+                &:hover {
+                    background-color: v.$color-bg-white;
+                }
+            }
+
+            &__img {
+                width: 60%;
+                height: 60%;
+                object-fit: contain;
+                @include mixin.transition-regular();
+            }
+
+            &__body {
+                text-align: center;
+                color: v.$color-title;
+                margin-top: 18px;
+            }
+
+            &__title {
+                font: v.$fw-bold 18px v.$font-josefin;
+                line-height: 100%;
+                margin-bottom: 8px;
+            }
+
+            &__swatches {
+                display: flex;
+                gap: 5px;
+                justify-content: center;
+            }
+
+            &__dot {
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+                margin-bottom: 15px;
+
+                &--orange {
+                    background-color: rgba(222, 144, 52, 1);
+                }
+
+                &--pink {
+                    background-color: rgba(236, 66, 162, 1);
+                }
+
+                &--purple {
+                    background-color: rgba(133, 104, 255, 1);
+                }
+            }
+
+            &__prices {
+                display: flex;
+                gap: 10px;
+                justify-content: center;
+                font: v.$fw-regular v.$fs-small v.$font-josefin;
+                line-height: 100%;
+
+                &-old {
+                    color: v.$color-muted;
+                    text-decoration: line-through;
+                }
+            }
 
 
+        }
+    }
+
+    .logo-brands {
+        display: flex;
+        justify-content: center;
+        margin-top: 83px;
+    }
+
+
+    @media (max-width:992px) {
+        .product-grid {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+
+    @media (max-width:768px) {
+        .product-grid {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px ;
+        }
+    }
+
+    @media (max-width: 375px) {
+        .product-grid{
+            grid-template-columns: 1fr;
+        }
+    }
 }
