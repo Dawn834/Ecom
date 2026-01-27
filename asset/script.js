@@ -78,11 +78,25 @@ document.addEventListener('click', (e) => {
         return;
     }
 
-    // close dropdown click
+    // close dropdown click item
     const item = e.target.closest(".dropdown__item");
     if (item) {
-        const parentdropdown = item.closest(".dropdown");
-        parentdropdown.classList.remove("active");
+        e.preventDefault(); // vì item là <a>
+
+        const parentDropdown = item.closest(".dropdown");
+        const dropdownBtn = parentDropdown.querySelector(".dropdown__btn");
+
+        // lưu giá trị
+        const value = item.textContent.trim();
+        selectedDropdownValue = value;
+
+        // hiển trị lên btn : textContetn
+        dropdownBtn.textContent = value;
+
+        // close dropdown
+        parentDropdown.classList.remove("active");
+
+        console.log("Selected:", selectedDropdownValue);
         return;
     }
 
