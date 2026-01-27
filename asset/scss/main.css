@@ -2000,6 +2000,8 @@ footer .footer__nav-list .footer__nav-item:hover {
   display: flex;
   gap: 30px;
   align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 #grid-default .catalog-toolbar__label {
   margin-right: 10px;
@@ -2037,6 +2039,9 @@ footer .footer__nav-list .footer__nav-item:hover {
   align-items: center;
   gap: 5px;
 }
+#grid-default .catalog-toolbar__view {
+  margin-top: 5px;
+}
 @media (max-width: 992px) {
   #grid-default .catalog-toolbar {
     flex-direction: column;
@@ -2044,6 +2049,11 @@ footer .footer__nav-list .footer__nav-item:hover {
   }
   #grid-default .catalog-toolbar__left {
     text-align: center;
+  }
+}
+@media (max-width: 430px) {
+  #grid-default .catalog-toolbar__right {
+    gap: 5px;
   }
 }
 @media (max-width: 576px) {
@@ -2088,6 +2098,13 @@ footer .footer__nav-list .footer__nav-item:hover {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 53px 81px;
+  opacity: 0;
+  display: none;
+  transition: all 0.3s ease;
+}
+#grid-default .product-grid.active {
+  opacity: 1;
+  display: grid;
 }
 #grid-default .product-grid .product-card__media {
   display: flex;
@@ -2178,15 +2195,17 @@ footer .footer__nav-list .footer__nav-item:hover {
   color: rgb(251, 46, 134);
   text-decoration: line-through;
 }
-#grid-default .logo-brands {
-  display: flex;
-  justify-content: center;
-  margin-top: 83px;
-}
 #grid-default .product-list {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr;
   gap: 30px;
+  opacity: 0;
+  display: none;
+  transition: all 0.3s ease;
+}
+#grid-default .product-list.active {
+  opacity: 1;
+  display: grid;
 }
 #grid-default .product-list .product-row {
   display: flex;
@@ -2287,6 +2306,11 @@ footer .footer__nav-list .footer__nav-item:hover {
 #grid-default .product-list .product-row__swatches .product-row__dot--purple {
   background-color: rgb(94, 55, 255);
 }
+#grid-default .logo-brands {
+  display: flex;
+  justify-content: center;
+  margin-top: 83px;
+}
 @media (max-width: 992px) {
   #grid-default .product-grid {
     grid-template-columns: repeat(3, 1fr);
@@ -2299,6 +2323,14 @@ footer .footer__nav-list .footer__nav-item:hover {
   #grid-default .product-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
+  }
+}
+@media (max-width: 576px) {
+  #grid-default .product-list .product-row__content-head {
+    width: 100%;
+  }
+  #grid-default .product-list .product-row__content-desc {
+    width: 100%;
   }
 }
 @media (max-width: 375px) {
