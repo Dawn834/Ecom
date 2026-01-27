@@ -10,9 +10,6 @@
         @include mixin.catalog-toolbar();
         @include mixin.dropdown();
     }
-
-    .catalog-content{}
-
     .product-grid {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
@@ -260,9 +257,7 @@
     }
 
     .logo-brands {
-        display: flex;
-        justify-content: center;
-        margin-top: 83px;
+        @include mixin.brands();
     }
 
 

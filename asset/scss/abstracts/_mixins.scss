@@ -118,7 +118,8 @@
         display: flex;
         align-items: center;
         gap: 5px;
-        .dropdown__btn{
+
+        .dropdown__btn {
             flex-grow: 1;
         }
     }
@@ -146,12 +147,14 @@
             text-align: center;
         }
     }
+
     @media (max-width:430px) {
-        &__right{
+        &__right {
             gap: 5px;
         }
-        
+
     }
+
     @media (max-width:576px) {
         &__left {
             &-title {
@@ -210,9 +213,16 @@
 @mixin tabs {
     opacity: 0;
     display: none;
+
     &.active {
         opacity: 1;
         display: grid;
     }
 
+}
+
+@mixin brands {
+    display: flex;
+    justify-content: center;
+    margin-top: 83px;
 }

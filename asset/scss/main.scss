@@ -1,6 +1,6 @@
 /* ===== ABSTRACTS ===== */
 @use 'abstracts/variables' as v;
-@use "abstracts/mixins" ;
+@use "abstracts/mixins";
 
 /* ===== BASE ===== */
 @use "base/reset";
@@ -14,3 +14,4 @@
 @use "page/header-footer";
 @use "page/homepage";
 @use "page/grid-default";
+@use "page/left-sidebar";
