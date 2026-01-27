@@ -2017,9 +2017,11 @@ footer .footer__nav-list .footer__nav-item:hover {
   font: 400 12px "Lato", sans-serif;
   display: flex;
   align-items: center;
+  padding-left: 10px;
 }
 #grid-default .catalog-toolbar__select {
   padding-left: 10px;
+  padding-right: 10px;
   width: 96px;
   height: 28px;
   border: 1px solid rgb(231, 230, 239);
@@ -2029,6 +2031,9 @@ footer .footer__nav-list .footer__nav-item:hover {
   display: flex;
   align-items: center;
   gap: 5px;
+}
+#grid-default .catalog-toolbar__select .dropdown__btn {
+  flex-grow: 1;
 }
 #grid-default .catalog-toolbar__field {
   display: flex;

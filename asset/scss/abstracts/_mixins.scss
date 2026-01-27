@@ -103,10 +103,12 @@
         font: v.$fw-regular 12px v.$font-lato ;
         display: flex;
         align-items: center;
+        padding-left: 10px;
     }
 
     &__select {
         padding-left: 10px;
+        padding-right: 10px;
         width: 96px;
         height: 28px;
         border: 1px solid rgba(231, 230, 239, 1);
@@ -116,7 +118,9 @@
         display: flex;
         align-items: center;
         gap: 5px;
-
+        .dropdown__btn{
+            flex-grow: 1;
+        }
     }
 
     &__field {
