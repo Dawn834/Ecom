@@ -158,10 +158,10 @@
             }
 
             &__media {
-                max-width: 313px;
-                aspect-ratio: calc(313/217);
+                width: 284px;
+                aspect-ratio: calc(284/197);
                 overflow: hidden;
-
+                flex-shrink: 0;
                 img {
                     width: 100%;
                     object-fit: contain;
@@ -173,12 +173,12 @@
                     width: 50%;
                     display: flex;
                     justify-content: space-between;
-                    margin-bottom: 15px;
+                    margin-bottom: 13px;
                     align-items: center;
                 }
 
                 &-title {
-                    font: v.$fw-bold 20px v.$font-josefin;
+                    font-size: 18px;
                     line-height: 100%;
                     color: v.$color-title;
                 }
@@ -191,11 +191,10 @@
                 }
 
                 &-prices {
-                    font: v.$fw-regular v.$fs-body v.$font-josefin;
+                    font: v.$fw-regular v.$fs-small v.$font-josefin;
                     color: v.$color-title;
                     display: flex;
                     gap: 10px;
-
                     &--old {
                         color: v.$color-muted;
                         text-decoration: line-through;
@@ -209,11 +208,11 @@
                 }
 
                 &-desc {
-                    font: v.$fw-regular 18px v.$font-josefin;
+                    font: v.$fw-regular v.$fs-body v.$font-josefin;
                     line-height: 31px;
                     color: v.$color-sub-text-color;
                     width: 80%;
-                    margin-bottom: 30px;
+                    margin-bottom: 28px;
                 }
 
                 &-actions {

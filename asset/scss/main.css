@@ -2166,7 +2166,7 @@ footer .footer__nav-list .footer__nav-item:hover {
   margin-top: 18px;
 }
 #grid-default .product-grid .product-card__title {
-  font: 700 18px "Josefin Sans", sans-serif;
+  font-size: 18px;
   line-height: 100%;
   margin-bottom: 8px;
 }
@@ -2240,7 +2240,7 @@ footer .footer__nav-list .footer__nav-item:hover {
 #grid-default .product-list .product-row__content-head {
   width: 50%;
   display: flex;
-  justify-content: space-between;
+  gap: 18px;
   margin-bottom: 15px;
   align-items: center;
 }
@@ -2613,9 +2613,10 @@ footer .footer__nav-list .footer__nav-item:hover {
   box-shadow: 0 0px 30px rgba(0, 0, 0, 0.3);
 }
 #left-sidebar .product-list .product-row__media {
-  max-width: 313px;
-  aspect-ratio: 1.4423963134;
+  width: 284px;
+  aspect-ratio: 1.4416243655;
   overflow: hidden;
+  flex-shrink: 0;
 }
 #left-sidebar .product-list .product-row__media img {
   width: 100%;
@@ -2626,11 +2627,11 @@ footer .footer__nav-list .footer__nav-item:hover {
   width: 50%;
   display: flex;
   justify-content: space-between;
-  margin-bottom: 15px;
+  margin-bottom: 13px;
   align-items: center;
 }
 #left-sidebar .product-list .product-row__content-title {
-  font: 700 20px "Josefin Sans", sans-serif;
+  font-size: 18px;
   line-height: 100%;
   color: rgb(21, 24, 117);
 }
@@ -2641,7 +2642,7 @@ footer .footer__nav-list .footer__nav-item:hover {
   margin-bottom: 12px;
 }
 #left-sidebar .product-list .product-row__content-prices {
-  font: 400 16px "Josefin Sans", sans-serif;
+  font: 400 14px "Josefin Sans", sans-serif;
   color: rgb(21, 24, 117);
   display: flex;
   gap: 10px;
@@ -2656,11 +2657,11 @@ footer .footer__nav-list .footer__nav-item:hover {
   gap: 4px;
 }
 #left-sidebar .product-list .product-row__content-desc {
-  font: 400 18px "Josefin Sans", sans-serif;
+  font: 400 16px "Josefin Sans", sans-serif;
   line-height: 31px;
   color: rgb(138, 143, 185);
   width: 80%;
-  margin-bottom: 30px;
+  margin-bottom: 28px;
 }
 #left-sidebar .product-list .product-row__content-actions {
   display: flex;
