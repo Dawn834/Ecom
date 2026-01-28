@@ -158,7 +158,8 @@
             }
 
             &__media {
-                width: 284px;
+                max-width: 284px;
+                width: 100%;
                 aspect-ratio: calc(284/197);
                 overflow: hidden;
                 flex-shrink: 0;
@@ -664,6 +665,7 @@
                     &-desc {
                         width: 100%;
                         font-size: 12px;
+                        line-height: 20px;
                     }
                 }
 
@@ -680,8 +682,6 @@
             &__option {
                 font-size: 10px;
             }
-
-            &__item {}
 
             .price {
                 .filter-sidebar__search {

@@ -2613,7 +2613,8 @@ footer .footer__nav-list .footer__nav-item:hover {
   box-shadow: 0 0px 30px rgba(0, 0, 0, 0.3);
 }
 #left-sidebar .product-list .product-row__media {
-  width: 284px;
+  max-width: 284px;
+  width: 100%;
   aspect-ratio: 1.4416243655;
   overflow: hidden;
   flex-shrink: 0;
@@ -2982,6 +2983,7 @@ footer .footer__nav-list .footer__nav-item:hover {
   #left-sidebar .product-list .product-row__content-desc {
     width: 100%;
     font-size: 12px;
+    line-height: 20px;
   }
   #left-sidebar .filter-sidebar {
     width: 30%;
