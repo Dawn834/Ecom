@@ -105,15 +105,6 @@ document.addEventListener('click', (e) => {
         document.querySelectorAll(".dropdown.active").forEach(d => {
             d.classList.remove("active")
         });
-
-    // click esc --> close dropdown
-    document.addEventListener("keydown", (e) => {
-        if (e.key === "Escape") {
-            document.querySelectorAll(".dropdown.active").forEach(d => {
-                d.classList.remove("active");
-            });
-        }
-    });
 });
 
 
@@ -218,39 +209,89 @@ document.querySelectorAll(".tabs").forEach((tabsElement) => {
 });
 
 // Swiper carousel per view
-var swiper = new Swiper(".mySwiper-per-view", {
-    slidesPerView: 4,
-    spaceBetween: 30,
-    watchOverflow: true,
-    grabCursor: true,
-    pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-    },
-    breakpoints: {
-        0: {
-            slidesPerView: 1,
-            spaceBetween: 16,
-        },
-        576: {
-            slidesPerView: 2,
-            spaceBetween: 20,
-        },
-        992: {
-            slidesPerView: 3,
-            spaceBetween: 24,
-        },
-        1200: {
-            slidesPerView: 4,
-            spaceBetween: 30,
-        },
-    },
-});
+// var swiper = new Swiper(".mySwiper-per-view", {
+//     slidesPerView: 4,
+//     spaceBetween: 30,
+//     watchOverflow: true,
+//     grabCursor: true,
+//     pagination: {
+//         el: ".swiper-pagination",
+//         clickable: true,
+//     },
+//     breakpoints: {
+//         0: {
+//             slidesPerView: 1,
+//             spaceBetween: 16,
+//         },
+//         576: {
+//             slidesPerView: 2,
+//             spaceBetween: 20,
+//         },
+//         992: {
+//             slidesPerView: 3,
+//             spaceBetween: 24,
+//         },
+//         1200: {
+//             slidesPerView: 4,
+//             spaceBetween: 30,
+//         },
+//     },
+// });
 
 // 1 view
-var swiper = new Swiper(".mySwiper-1view", {
-    pagination: {
-        el: ".swiper-pagination",
-    },
-});
+// var swiper = new Swiper(".mySwiper-1view", {
+//     pagination: {
+//         el: ".swiper-pagination",
+//     },
+// });
 
+
+document.addEventListener("DOMContentLoaded", function () {
+    if (typeof Swiper === "undefined") {
+        console.warn("Swiper library is not loaded");
+        return;
+    }
+
+    // Swiper per view
+    const perViewEl = document.querySelector(".mySwiper-per-view");
+    if (perViewEl) {
+        new Swiper(".mySwiper-per-view", {
+            slidesPerView: 4,
+            spaceBetween: 30,
+            watchOverflow: true,
+            grabCursor: true,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            breakpoints: {
+                0: {
+                    slidesPerView: 1,
+                    spaceBetween: 16,
+                },
+                576: {
+                    slidesPerView: 2,
+                    spaceBetween: 20,
+                },
+                992: {
+                    slidesPerView: 3,
+                    spaceBetween: 24,
+                },
+                1200: {
+                    slidesPerView: 4,
+                    spaceBetween: 30,
+                },
+            },
+        });
+    }
+
+    // Swiper 1view
+    const oneViewEl = document.querySelector(".mySwiper-1view");
+    if (oneViewEl) {
+        new Swiper(".mySwiper-1view", {
+            pagination: {
+                el: ".swiper-pagination",
+            },
+        });
+    }
+});

@@ -639,6 +639,7 @@ footer .footer__nav-list .footer__nav-item:hover {
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
+  cursor: pointer;
 }
 #homepage .hero-slider__track {
   display: flex;
@@ -646,7 +647,7 @@ footer .footer__nav-list .footer__nav-item:hover {
   align-items: center;
   height: 100%;
   overflow: hidden;
-  background-image: url(/asset/img/homepage/hero-slider/image-32.png);
+  background-image: url(../img/homepage/hero-slider/background-cta.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -662,14 +663,14 @@ footer .footer__nav-list .footer__nav-item:hover {
   transition: all 0.3s ease;
 }
 #homepage .hero-slider__track .hero-content__title {
-  font: 700 53px "Josefin Sans", sans-serif;
+  font-size: 53px;
   line-height: 132%;
   letter-spacing: 0.015em;
   margin-bottom: 12px;
   transition: all 0.3s ease;
 }
 #homepage .hero-slider__track .hero-content__text {
-  font: 700 16px "Josefin Sans", sans-serif;
+  font: 700 16px "Lato", sans-serif;
   line-height: 28px;
   color: rgb(138, 143, 185);
   margin-bottom: 30px;
@@ -677,7 +678,7 @@ footer .footer__nav-list .footer__nav-item:hover {
 }
 #homepage .hero-slider__track .hero-content__btn {
   display: inline-block;
-  padding: 17px 40px;
+  padding: 12px 40px;
   transition: all 0.3s ease;
 }
 #homepage .hero-slider__track .hero-content__btn:hover {
@@ -689,13 +690,13 @@ footer .footer__nav-list .footer__nav-item:hover {
   top: 40px;
 }
 #homepage .hero-slider .swiper-slide:nth-child(2) {
-  background-image: url(/asset/img/homepage/hero-slider/background-cta.jpg);
+  background-image: url(../img/homepage/hero-slider/background-cta.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
 }
 #homepage .hero-slider .swiper-slide:nth-child(3) {
-  background-image: url(/asset/img/homepage/hero-slider/Group-131.png);
+  background-image: url(../img/homepage/hero-slider/Group-131.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -856,7 +857,6 @@ footer .footer__nav-list .footer__nav-item:hover {
 #homepage .feature-product .product-card .product-card__info .product-card__title {
   font-family: "Lato", sans-serif;
   font-size: 18px;
-  font-weight: 700;
   color: rgb(251, 46, 134);
   margin-bottom: 12px;
   transition: color 0.25s ease;
@@ -1081,7 +1081,7 @@ footer .footer__nav-list .footer__nav-item:hover {
   gap: 30px;
 }
 #homepage .features-list .features-item {
-  box-shadow: 0 0 30px rgba(0, 0, 0, 0.12);
+  box-shadow: 0px 8px 40px 0px rgba(49, 32, 138, 0.05);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1496,6 +1496,7 @@ footer .footer__nav-list .footer__nav-item:hover {
   font-weight: 400;
   line-height: 132%;
   letter-spacing: 0.015em;
+  margin-bottom: 20px;
 }
 #homepage .discount-banner__content-desc {
   font-family: "Lato", sans-serif;
@@ -1631,7 +1632,7 @@ footer .footer__nav-list .footer__nav-item:hover {
 #homepage .newsletter {
   margin-top: 125px;
   margin-bottom: 100px;
-  background-image: url(/asset/img/homepage/background-cta.jpg);
+  background-image: url(../img/homepage/background-cta.jpg);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
