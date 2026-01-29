@@ -13,5 +13,7 @@
 /* ===== PAGES ===== */
 @use "page/header-footer";
 @use "page/homepage";
+@use "page/page-header";
 @use "page/grid-default";
 @use "page/left-sidebar";
+@use "page/product-detail";

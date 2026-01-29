@@ -1,0 +1,12 @@
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins" as mixin;
+
+
+.page-header {
+    @include mixin.page-header();
+}
+
+.catalog-toolbar {
+    @include mixin.catalog-toolbar();
+    @include mixin.dropdown();
+}
