@@ -20,15 +20,23 @@
     // checkout grid
     &__grid {
         display: flex;
+
         gap: 30px;
     }
 
     &__main {
         background-color: v.$color-bg-card;
         padding: 65px 30px;
+        flex-grow: 1;
+
     }
 
     &-form {
+        color: v.$color-sub-text-color;
+        display: flex;
+        flex-direction: column;
+        gap: 100px;
+
         &__section {
             &-head {
                 display: flex;
@@ -47,15 +55,21 @@
             line-height: 100%;
             letter-spacing: 0.01em;
             color: v.$color-sub-text-color;
+            @include mixin.transition-regular();
+            &:hover{
+                color: v.$color-muted;
+            }
         }
 
         &__fields {
             display: flex;
             flex-direction: column;
         }
-        &__field{
+
+        &__field {
             margin-bottom: 32px;
         }
+
         &__input {
             width: 100%;
             border-top: none;
@@ -65,23 +79,215 @@
             background-color: #fafafa00;
             outline: none;
             padding-bottom: 13px;
-            &::placeholder{
+
+            &::placeholder {
                 font: v.$fw-semibold v.$fs-small v.$font-lato;
+                line-height: 100%;
+                letter-spacing: 0.02em;
+                color: #C1C8E1;
+            }
+        }
+
+        &__check {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+
+            &-text {
+                font: v.$fw-medium 12px v.$font-lato;
                 line-height: 100%;
                 letter-spacing: 0.02em;
             }
         }
-        &__check{
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-        &__checkbox{
+
+        &__checkbox {
             width: 8px;
             height: 8px;
             padding: 2px;
             border: none;
-            accent-color: v.$color-sub-btn;
+            accent-color: v.$color-btn;
         }
+
+
+        &__row {
+            display: flex;
+            justify-content: space-between;
+            gap: 30px;
+
+            .checkout-form__field {
+                flex-grow: 1;
+            }
+        }
+
+        &__btn {
+            height: 44px;
+            max-width: 182px;
+            padding: 0;
+            border-radius: 2px;
+            @include mixin.transition-regular();
+            @include mixin.hover-btn-p();
+        }
+    }
+
+    &__aside {
+        max-width: 369px;
+        width: 100%;
+
+        .order-summary {
+            &__items {
+                display: flex;
+                flex-direction: column;
+                gap: 14px;
+                margin-bottom: 40px;
+                .order-item {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    padding-bottom: 15px;
+                    border-bottom: 1px solid #E1E1E4;
+
+                    &__left {
+                        display: flex;
+                        align-items: center;
+                        gap: 17px;
+                    }
+
+                    &__thumb {
+                        max-width: 83px;
+                        aspect-ratio: calc(83/87);
+                    }
+
+                    &__img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+
+                    &__info {
+                        font-family: v.$font-josefin;
+                        font-weight: v.$fw-regular;
+                    }
+
+                    &__name {
+                        font-size: v.$fs-small;
+                        line-height: 100%;
+                        margin-bottom: 8px;
+                    }
+
+                    &__meta {
+                        font-size: 12px;
+                        line-height: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        gap: 7px;
+                        color: v.$color-sub-text-color;
+                    }
+
+                    &__price {
+                        font: v.$fw-regular v.$fs-small v.$font-josefin;
+                        line-height: 100%;
+                    }
+                }
+            }
+
+            &__box {
+                background: v.$color-bg-main-header;
+                border-radius: 3px;
+                padding: 32px 23px;
+
+            }
+
+            &__row {
+                display: flex;
+                padding-bottom: 13px;
+                justify-content: space-between;
+                font-family: v.$font-lato;
+                line-height: 100%;
+                border-bottom: 2px solid rgba(232, 230, 241, 1);
+
+                &:first-child {
+                    margin-bottom: 34px;
+                }
+            }
+
+            &__label {
+                font-weight: v.$fw-semibold;
+                font-size: 18px;
+            }
+
+            &__value {
+                font-weight: v.$fw-regular;
+                font-size: v.$fs-body;
+            }
+
+            &__note {
+                display: flex;
+                gap: 7px;
+                align-items: center;
+                font: v.$fw-regular 12px v.$font-lato;
+                line-height: 100%;
+                color: v.$color-sub-text-color;
+                margin-top: 27px;
+                margin-bottom: 35px;
+            }
+
+            &__dot {
+                width: 8px;
+                height: 8px;
+                border-radius: 50%;
+                background: v.$color-sub-btn;
+            }
+
+            &__btn {
+                width: 100%;
+                height: 40px;
+                border-radius: 3px;
+                font-size: v.$fs-small;
+                font-family: v.$font-lato;
+                background: v.$color-sub-btn;
+                @include mixin.transition-regular();
+                @include mixin.hover-btn-p();
+            }
+        }
+    }
+
+    @media (max-width:992px) {
+        .checkout{
+            &__grid{
+                flex-direction: column;
+            }
+            &__aside{
+                max-width: 100%;
+                .order-summary{
+                    display: flex;
+                    justify-content: center;
+                    gap: 30px;
+                    &__items{
+                        flex-grow: 1;
+                    }
+                }
+
+            }
+        }
+        
+    }
+    @media (max-width:576px) {
+        .checkout{
+            &-form{
+                &__section{
+                    &-head{
+                        flex-direction: column;
+                        align-items: flex-start;
+                        gap: 5px;
+                    }
+                }
+            }
+            &__aside{
+                .order-summary{
+                    flex-direction: column;
+                }
+            }
+        }
+        
     }
 }
