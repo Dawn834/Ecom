@@ -3815,4 +3815,79 @@ footer .footer__nav-list .footer__nav-item:hover {
   #order-completed .order-complete__desc {
     font-size: 16px;
   }
+}
+
+.checkout__header {
+  margin-top: 74px;
+}
+.checkout__brand {
+  font-size: 24px;
+  margin-bottom: 16px;
+}
+.checkout__crumbs {
+  font: 400 12px "Lato", sans-serif;
+  line-height: 100%;
+  margin-bottom: 25px;
+}
+.checkout__grid {
+  display: flex;
+  gap: 30px;
+}
+.checkout__main {
+  background-color: rgb(246, 247, 251);
+  padding: 65px 30px;
+}
+.checkout-form__section-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+.checkout-form__title {
+  font-size: 18px;
+}
+.checkout-form__hint {
+  font: 500 14px "Lato", sans-serif;
+  line-height: 100%;
+  letter-spacing: 0.01em;
+  color: rgb(138, 143, 185);
+}
+.checkout-form__fields {
+  display: flex;
+  flex-direction: column;
+}
+.checkout-form__field {
+  margin-bottom: 32px;
+}
+.checkout-form__input {
+  width: 100%;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 1px solid rgb(199, 206, 228);
+  background-color: rgba(250, 250, 250, 0);
+  outline: none;
+  padding-bottom: 13px;
+}
+.checkout-form__input::-moz-placeholder {
+  font: 600 14px "Lato", sans-serif;
+  line-height: 100%;
+  letter-spacing: 0.02em;
+}
+.checkout-form__input::placeholder {
+  font: 600 14px "Lato", sans-serif;
+  line-height: 100%;
+  letter-spacing: 0.02em;
+}
+.checkout-form__check {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.checkout-form__checkbox {
+  width: 8px;
+  height: 8px;
+  padding: 2px;
+  border: none;
+  accent-color: rgb(25, 209, 111);
 }/*# sourceMappingURL=main.css.map */

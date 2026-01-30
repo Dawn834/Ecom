@@ -1,0 +1,87 @@
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins" as mixin;
+
+.checkout {
+    &__header {
+        margin-top: 74px;
+    }
+
+    &__brand {
+        font-size: 24px;
+        margin-bottom: 16px;
+    }
+
+    &__crumbs {
+        font: v.$fw-regular 12px v.$font-lato;
+        line-height: 100%;
+        margin-bottom: 25px;
+    }
+
+    // checkout grid
+    &__grid {
+        display: flex;
+        gap: 30px;
+    }
+
+    &__main {
+        background-color: v.$color-bg-card;
+        padding: 65px 30px;
+    }
+
+    &-form {
+        &__section {
+            &-head {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                margin-bottom: 40px;
+            }
+        }
+
+        &__title {
+            font-size: 18px;
+        }
+
+        &__hint {
+            font: v.$fw-medium v.$fs-small v.$font-lato;
+            line-height: 100%;
+            letter-spacing: 0.01em;
+            color: v.$color-sub-text-color;
+        }
+
+        &__fields {
+            display: flex;
+            flex-direction: column;
+        }
+        &__field{
+            margin-bottom: 32px;
+        }
+        &__input {
+            width: 100%;
+            border-top: none;
+            border-left: none;
+            border-right: none;
+            border-bottom: 1px solid rgba(199, 206, 228, 1);
+            background-color: #fafafa00;
+            outline: none;
+            padding-bottom: 13px;
+            &::placeholder{
+                font: v.$fw-semibold v.$fs-small v.$font-lato;
+                line-height: 100%;
+                letter-spacing: 0.02em;
+            }
+        }
+        &__check{
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        &__checkbox{
+            width: 8px;
+            height: 8px;
+            padding: 2px;
+            border: none;
+            accent-color: v.$color-sub-btn;
+        }
+    }
+}
