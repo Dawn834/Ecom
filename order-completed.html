@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shopping curt</title>
+    <title>Order Completed</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
     <link rel="stylesheet" href="./asset/css/boostrap-grid.css">
     <link rel="stylesheet" href="./asset/scss/main.css">
@@ -286,312 +286,54 @@
     <main>
         <section class="page-header">
             <div class="container">
-                <h1 class="page-header__title">Shopping Curt</h1>
+                <h1 class="page-header__title">Order Completed</h1>
                 <nav class="page-header__breadcrumb" aria-label="Breadcrumb">
                     <a href="./homepage.html" class="page-header__breadcrumb-link">Home</a>
                     <a href="./homepage.html" class="page-header__breadcrumb-link">. Pages</a>
-                    <a href="#" class="page-header__breadcrumb-link active">. shopping Curt</a>
+                    <a href="#" class="page-header__breadcrumb-link active">. Order Completed </a>
                 </nav>
             </div>
         </section>
-        <section id="cart" class="container">
-            <div class="cart__grid">
-                <!-- LEFT: Cart table -->
-                <div class="cart__main">
-                    <div class="cart-table">
-                        <div class="cart-table__head">
-                            <div class="cart-table__col cart-table__col--product">Product</div>
-                            <div class="cart-table__col cart-table__col--price">Price</div>
-                            <div class="cart-table__col cart-table__col--qty">Quantity</div>
-                            <div class="cart-table__col cart-table__col--total">Total</div>
-                        </div>
 
-                        <div class="cart-table__body">
-                            <!-- row -->
-                            <div class="cart-row">
-                                <div class="cart-row__product">
+        <section id="order-completed">
+            <div class="order-complete container">
+                <div class="order-complete__inner">
+                    <div class="order-complete__icon" aria-hidden="true">
+                        <svg width="89" height="82" viewBox="0 0 89 82" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M26.041 76.3472C18.041 72.3472 7.70765 52.6806 3.54098 43.3472C-1.92121 32.3473 1.54098 27.8472 2.04098 24.3472C2.44098 21.5472 7.20765 16.5138 9.54098 14.3472C12.2076 11.3472 21.041 4.54725 35.041 1.34725C52.541 -2.65275 71.041 8.34725 80.541 16.8472C88.141 23.6472 88.041 33.3472 87.041 37.3472C85.2076 42.5139 79.141 56.1472 69.541 69.3472C57.541 85.8472 36.041 81.3472 26.041 76.3472Z"
+                                fill="#F6F7FA" stroke="#F6F7FA" />
+                            <circle cx="44" cy="40" r="32.5" fill="white" />
+                            <path
+                                d="M34.811 59.0001L21.811 48.0001C21.1443 46.0001 21.111 42.2001 26.311 43.0001C31.1106 47.0001 33.9775 49.6667 34.811 50.5L42.8105 40.5C46.1439 36.6667 54.1105 28.2 59.3105 25C61.3105 23.8 63.1439 22.8333 63.8105 22.5C65.4772 22.5 68.5105 23.5 67.3105 27.5C62.3105 30.5 61.3105 29 51.3105 40.5C45.5828 47.0869 43.2842 50.1368 42.8075 50.7874L38.3105 57.5C37.735 58.5001 36.2293 60.2002 34.811 59.0001Z"
+                                fill="#FF1788" />
+                            <path
+                                d="M34.811 59.0001L21.811 48.0001C21.1443 46.0001 21.111 42.2001 26.311 43.0001C31.1106 47.0001 33.9775 49.6667 34.811 50.5L42.8105 40.5C46.1439 36.6667 54.1105 28.2 59.3105 25C61.3105 23.8 63.1439 22.8333 63.8105 22.5C65.4772 22.5 68.5105 23.5 67.3105 27.5C62.3105 30.5 61.3105 29 51.3105 40.5C43.3105 49.7 42 52 43 50.5L38.3105 57.5C37.735 58.5001 36.2293 60.2002 34.811 59.0001Z"
+                                stroke="#FF1788" />
+                        </svg>
 
-                                    <a class="cart-row__thumb" href="#">
-                                        <div class="cart-row__media">
-                                            <img class="cart-row__img"
-                                                src="./asset/img/cart/06df685d89ce690ebe62b390c3d5145dda42ffa0.jpg"
-                                                alt="Ut diam consequat" />
-                                        </div>
-                                        <button class="cart-row__remove" type="button" aria-label="Remove item"><svg
-                                                width="12" height="12" viewBox="0 0 12 12" fill="none"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <path
-                                                    d="M6 12C9.31371 12 12 9.31371 12 6C12 2.68629 9.31371 0 6 0C2.68629 0 0 2.68629 0 6C0 9.31371 2.68629 12 6 12Z"
-                                                    fill="black" />
-                                                <path d="M7.8002 4.19995L4.2002 7.79995" stroke="white" stroke-width="2"
-                                                    stroke-linecap="round" stroke-linejoin="round" />
-                                                <path d="M4.2002 4.19995L7.8002 7.79995" stroke="white" stroke-width="2"
-                                                    stroke-linecap="round" stroke-linejoin="round" />
-                                            </svg>
-                                        </button>
-
-                                    </a>
-
-                                    <div class="cart-row__info">
-                                        <a class="cart-row__name" href="#">Ut diam consequat</a>
-                                        <div class="cart-row__meta">
-                                            <span class="cart-row__meta-item">Color: Brown</span>
-                                            <span class="cart-row__meta-item">Size: XL</span>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="cart-row__price">$32.00</div>
-
-                                <div class="cart-row__qty quantity">
-                                    <button class="cart-row__qty-btn js-qty-minus" type="button"
-                                        aria-label="Decrease">−</button>
-                                    <input class="cart-row__qty-input js-qty-input" type="number" value="1" />
-                                    <button class="cart-row__qty-btn js-qty-plus" type="button"
-                                        aria-label="Increase">+</button>
-                                </div>
-
-                                <div class="cart-row__total">£219.00</div>
-                            </div>
-                            <div class="cart-row">
-                                <div class="cart-row__product">
-
-                                    <a class="cart-row__thumb" href="#">
-                                        <div class="cart-row__media">
-                                            <img class="cart-row__img"
-                                                src="./asset/img/cart/06df685d89ce690ebe62b390c3d5145dda42ffa0.jpg"
-                                                alt="Ut diam consequat" />
-                                        </div>
-                                        <button class="cart-row__remove" type="button" aria-label="Remove item"><svg
-                                                width="12" height="12" viewBox="0 0 12 12" fill="none"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <path
-                                                    d="M6 12C9.31371 12 12 9.31371 12 6C12 2.68629 9.31371 0 6 0C2.68629 0 0 2.68629 0 6C0 9.31371 2.68629 12 6 12Z"
-                                                    fill="black" />
-                                                <path d="M7.8002 4.19995L4.2002 7.79995" stroke="white" stroke-width="2"
-                                                    stroke-linecap="round" stroke-linejoin="round" />
-                                                <path d="M4.2002 4.19995L7.8002 7.79995" stroke="white" stroke-width="2"
-                                                    stroke-linecap="round" stroke-linejoin="round" />
-                                            </svg>
-                                        </button>
-
-                                    </a>
-
-                                    <div class="cart-row__info">
-                                        <a class="cart-row__name" href="#">Ut diam consequat</a>
-                                        <div class="cart-row__meta">
-                                            <span class="cart-row__meta-item">Color: Brown</span>
-                                            <span class="cart-row__meta-item">Size: XL</span>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="cart-row__price">$32.00</div>
-
-                                <div class="cart-row__qty quantity">
-                                    <button class="cart-row__qty-btn js-qty-minus" type="button"
-                                        aria-label="Decrease">−</button>
-                                    <input class="cart-row__qty-input js-qty-input" type="number" value="1" />
-                                    <button class="cart-row__qty-btn js-qty-plus" type="button"
-                                        aria-label="Increase">+</button>
-                                </div>
-
-                                <div class="cart-row__total">£219.00</div>
-                            </div>
-
-                            <!-- row -->
-                            <div class="cart-row">
-                                <div class="cart-row__product">
-
-                                    <a class="cart-row__thumb" href="#">
-                                        <div class="cart-row__media">
-                                            <img class="cart-row__img"
-                                                src="./asset/img/cart/06df685d89ce690ebe62b390c3d5145dda42ffa0.jpg"
-                                                alt="Ut diam consequat" />
-                                        </div>
-                                        <button class="cart-row__remove" type="button" aria-label="Remove item"><svg
-                                                width="12" height="12" viewBox="0 0 12 12" fill="none"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <path
-                                                    d="M6 12C9.31371 12 12 9.31371 12 6C12 2.68629 9.31371 0 6 0C2.68629 0 0 2.68629 0 6C0 9.31371 2.68629 12 6 12Z"
-                                                    fill="black" />
-                                                <path d="M7.8002 4.19995L4.2002 7.79995" stroke="white" stroke-width="2"
-                                                    stroke-linecap="round" stroke-linejoin="round" />
-                                                <path d="M4.2002 4.19995L7.8002 7.79995" stroke="white" stroke-width="2"
-                                                    stroke-linecap="round" stroke-linejoin="round" />
-                                            </svg>
-                                        </button>
-
-                                    </a>
-
-                                    <div class="cart-row__info">
-                                        <a class="cart-row__name" href="#">Ut diam consequat</a>
-                                        <div class="cart-row__meta">
-                                            <span class="cart-row__meta-item">Color: Brown</span>
-                                            <span class="cart-row__meta-item">Size: XL</span>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="cart-row__price">$32.00</div>
-
-                                <div class="cart-row__qty quantity">
-                                    <button class="cart-row__qty-btn js-qty-minus" type="button"
-                                        aria-label="Decrease">−</button>
-                                    <input class="cart-row__qty-input js-qty-input" type="number" value="1" />
-                                    <button class="cart-row__qty-btn js-qty-plus" type="button"
-                                        aria-label="Increase">+</button>
-                                </div>
-
-                                <div class="cart-row__total">£219.00</div>
-                            </div>
-
-                            <div class="cart-row">
-                                <div class="cart-row__product">
-
-                                    <a class="cart-row__thumb" href="#">
-                                        <div class="cart-row__media">
-                                            <img class="cart-row__img"
-                                                src="./asset/img/cart/06df685d89ce690ebe62b390c3d5145dda42ffa0.jpg"
-                                                alt="Ut diam consequat" />
-                                        </div>
-                                        <button class="cart-row__remove" type="button" aria-label="Remove item"><svg
-                                                width="12" height="12" viewBox="0 0 12 12" fill="none"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <path
-                                                    d="M6 12C9.31371 12 12 9.31371 12 6C12 2.68629 9.31371 0 6 0C2.68629 0 0 2.68629 0 6C0 9.31371 2.68629 12 6 12Z"
-                                                    fill="black" />
-                                                <path d="M7.8002 4.19995L4.2002 7.79995" stroke="white" stroke-width="2"
-                                                    stroke-linecap="round" stroke-linejoin="round" />
-                                                <path d="M4.2002 4.19995L7.8002 7.79995" stroke="white" stroke-width="2"
-                                                    stroke-linecap="round" stroke-linejoin="round" />
-                                            </svg>
-                                        </button>
-
-                                    </a>
-
-                                    <div class="cart-row__info">
-                                        <a class="cart-row__name" href="#">Ut diam consequat</a>
-                                        <div class="cart-row__meta">
-                                            <span class="cart-row__meta-item">Color: Brown</span>
-                                            <span class="cart-row__meta-item">Size: XL</span>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="cart-row__price">$32.00</div>
-
-                                <div class="cart-row__qty quantity">
-                                    <button class="cart-row__qty-btn js-qty-minus" type="button"
-                                        aria-label="Decrease">−</button>
-                                    <input class="cart-row__qty-input js-qty-input" type="number" value="1" />
-                                    <button class="cart-row__qty-btn js-qty-plus" type="button"
-                                        aria-label="Increase">+</button>
-                                </div>
-
-                                <div class="cart-row__total">£219.00</div>
-                            </div>
-                            <div class="cart-row">
-                                <div class="cart-row__product">
-
-                                    <a class="cart-row__thumb" href="#">
-                                        <div class="cart-row__media">
-                                            <img class="cart-row__img"
-                                                src="./asset/img/cart/06df685d89ce690ebe62b390c3d5145dda42ffa0.jpg"
-                                                alt="Ut diam consequat" />
-                                        </div>
-                                        <button class="cart-row__remove" type="button" aria-label="Remove item"><svg
-                                                width="12" height="12" viewBox="0 0 12 12" fill="none"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <path
-                                                    d="M6 12C9.31371 12 12 9.31371 12 6C12 2.68629 9.31371 0 6 0C2.68629 0 0 2.68629 0 6C0 9.31371 2.68629 12 6 12Z"
-                                                    fill="black" />
-                                                <path d="M7.8002 4.19995L4.2002 7.79995" stroke="white" stroke-width="2"
-                                                    stroke-linecap="round" stroke-linejoin="round" />
-                                                <path d="M4.2002 4.19995L7.8002 7.79995" stroke="white" stroke-width="2"
-                                                    stroke-linecap="round" stroke-linejoin="round" />
-                                            </svg>
-                                        </button>
-
-                                    </a>
-
-                                    <div class="cart-row__info">
-                                        <a class="cart-row__name" href="#">Ut diam consequat</a>
-                                        <div class="cart-row__meta">
-                                            <span class="cart-row__meta-item">Color: Brown</span>
-                                            <span class="cart-row__meta-item">Size: XL</span>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="cart-row__price">$32.00</div>
-
-                                <div class="cart-row__qty quantity">
-                                    <button class="cart-row__qty-btn js-qty-minus" type="button"
-                                        aria-label="Decrease">−</button>
-                                    <input class="cart-row__qty-input js-qty-input" type="number" value="1" />
-                                    <button class="cart-row__qty-btn js-qty-plus" type="button"
-                                        aria-label="Increase">+</button>
-                                </div>
-
-                                <div class="cart-row__total">£219.00</div>
-                            </div>
-
-                        </div>
-
-                        <div class="cart-table__foot">
-                            <button class="btn btn-p cart-table__action cart-table__action--update" type="button">
-                                Update Cart
-                            </button>
-
-                            <button class=" btn btn-p cart-table__action cart-table__action--clear" type="button">
-                                Clear Cart
-                            </button>
-                        </div>
                     </div>
+
+                    <h2 class="order-complete__title">Your Order Is Completed!</h2>
+
+                    <p class="order-complete__desc">
+                        Thank you for your order! Your order is being processed and will be completed within 3-6 hours.
+                        You
+                        will receive an email confirmation when your order is completed.
+                    </p>
+
+                    <a class="order-complete__btn btn btn-p" href="./grid-default.html">Continue Shopping</a>
                 </div>
-
-                <!-- RIGHT: Summary -->
-                <aside class="cart__aside">
-                    <div class="cart-totals">
-                        <h3 class="cart-totals__title">Cart Totals</h3>
-
-                        <div class="cart-totals__box">
-                            <div class="cart-totals__row">
-                                <span class="cart-totals__label">Subtotals:</span>
-                                <span class="cart-totals__value">£219.00</span>
-                            </div>
-
-                            <div class="cart-totals__row">
-                                <span class="cart-totals__label">Totals:</span>
-                                <span class="cart-totals__value ">£325.00</span>
-                            </div>
-
-                            <div class="cart-totals__note">
-                                <span class="cart-totals__dot" aria-hidden="true"></span>
-                                Shipping &amp; taxes calculated at checkout.
-                            </div>
-
-                            <button class="cart-totals__btn btn" type="button">
-                                <a href="./order-completed.html">Proceed To Checkout</a></button>
-                        </div>
-                    </div>
-
-                    <div class="shipping-calc">
-                        <h3 class="shipping-calc__title">Calculate Shopping</h3>
-
-                        <form class="shipping-calc__form">
-                            <input class="shipping-calc__field" type="text" placeholder="Bangladesh" />
-                            <input class="shipping-calc__field" type="text" placeholder="Mirpur Dhaka - 1200" />
-                            <input class="shipping-calc__field" type="text" placeholder="Postal Code" />
-
-                            <button class="shipping-calc__btn btn btn-p" type="button">Calculate Shipping</button>
-                        </form>
-                    </div>
-                </aside>
             </div>
         </section>
+
+        <!-- brands  -->
+        <section class="logo-brands">
+            <img src="./asset/img/logo/logo-brands.png" alt="">
+        </section>
+
     </main>
+
     <footer>
         <div class="container footer">
             <div class="footer__brand">
@@ -650,7 +392,6 @@
         </div>
     </footer>
     <script src="./asset/script.js"> </script>
-    <script src="./asset/js/quantity.js"></script>
 </body>
 
 </html>

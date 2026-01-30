@@ -1,0 +1,73 @@
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins" as mixin;
+
+#order-completed {
+    margin-top: 180px;
+
+    .order-complete {
+        background-image: url(../img/order.png);
+        background-repeat: no-repeat;
+        background-size: 100%;
+        height: 500px;
+        object-fit: contain;
+
+        &__inner {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        &__title {
+            margin-bottom: 28px;
+            margin-top: 23px;
+            font-size: 36px;
+            color: rgba(16, 23, 80, 1);
+        }
+
+        &__desc {
+            width: 50%;
+            line-height: 30px;
+            margin-bottom: 30px;
+            font: v.$fw-semibold v.$fs-body v.$font-lato;
+            color: v.$color-sub-text-color  ;
+        }
+
+        &__btn {
+            display: inline-block;
+            max-width: 208px;
+            height: 59px;
+            border-radius: 3px;
+            @include mixin.transition-regular();
+            @include mixin.hover-btn-p();
+        }
+    }
+
+    @media (max-width:1200px) {
+        .order-complete {
+            background-image: none;
+        }
+
+    }
+
+    @media (max-width:992px) {
+        .order-complete {
+            &__desc {
+                width: 80%;
+            }
+        }
+    }
+
+    @media (max-width:576px) {
+        .order-complete {
+            &__title {
+                font-size: v.$fs-h4;
+            }
+
+            &__desc {
+                font-size: v.$fs-body;
+            }
+        }
+
+    }
+}
