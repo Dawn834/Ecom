@@ -1,0 +1,89 @@
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins" as mixin;
+
+.auth {
+    display: flex;
+    justify-content: center;
+    margin-top: 120px;
+    margin-bottom: 100px;
+
+    &__card {
+        box-shadow: 0px 0px 25px 10px #F8F8FB;
+        padding: 50px;
+        max-width: 544px;
+        width: 100%;
+    }
+
+    &__title {
+        font-size: 32px;
+        text-align: center;
+        margin-bottom: 7px;
+    }
+
+    &__subtitle {
+        font: v.$fw-regular v.$fs-body v.$font-lato;
+        line-height: 100%;
+        color: v.$color-sub-text-color;
+        text-align: center;
+        margin-bottom: 37px;
+    }
+
+    &-form {
+        font: v.$fw-regular 17px v.$font-lato ;
+        color: v.$color-sub-text-color;
+
+        &__fields {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            margin-bottom: 13px;
+        }
+
+        &__field {
+            width: 100%;
+        }
+
+        &__input {
+            width: 100%;
+            padding: 15px 13px;
+            height: 52px;
+            border: 1px solid #C2C5E1;
+            border-radius: 2px;
+
+            &::placeholder {
+                font-size: v.$fs-body;
+                color: v.$color-sub-text-color;
+                line-height: 100%;
+
+            }
+        }
+
+        &__meta {
+            color: v.$color-sub-text-color;
+            margin-bottom: 23px;
+            line-height: 100%;
+        }
+
+        &__btn {
+            width: 100%;
+            height: 47px;
+            border-radius: 3px;
+            font-weight: v.$fw-bold;
+            @include mixin.transition-regular();
+            @include mixin.hover-btn-p();
+            margin-bottom: 28px;
+        }
+
+        &__foot {
+            text-align: center;
+        }
+
+        &__link {
+            @include mixin.transition-regular();
+
+            &:hover {
+                color: v.$color-muted;
+            }
+        }
+    }
+}
