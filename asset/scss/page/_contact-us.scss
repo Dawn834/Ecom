@@ -1,0 +1,242 @@
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins" as mixin;
+
+#contact-us {
+    margin-top: 120px;
+
+    .contact-grid {
+        &__layout {
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            justify-content: space-between;
+            row-gap: 170px;
+        }
+
+        &__title {
+            font-size: 36px;
+            line-height: 48px;
+            color: v.$color-title;
+        }
+
+        &__text {
+            font: v.$fw-semibold v.$fs-body v.$font-lato;
+            line-height: 25.6px;
+            color: v.$color-sub-text-color;
+            text-align: justify;
+        }
+
+        // card--about
+        &__card--about {
+            margin-right: 55px;
+
+            h2 {
+                margin-bottom: 13px;
+            }
+
+            p {
+                margin-bottom: 50px;
+            }
+        }
+
+        &__dots {
+            display: flex;
+            gap: 14px;
+        }
+
+        &__dot {
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+
+            &--purple {
+                background-color: #5625DF;
+            }
+
+            &--pink {
+                background-color: v.$color-muted;
+            }
+
+            &--cyan {
+                background-color: #37DAF3;
+            }
+        }
+
+        .contact-form__layout {
+            grid-column: 1/-1;
+            display: flex;
+        }
+
+        // contact--way
+        &__card--way {
+            margin-left: 55px;
+
+            h2 {
+                margin-bottom: 20px;
+            }
+
+            .contact-way {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                row-gap: 50px;
+
+                &__item {
+                    display: flex;
+                    gap: 15px;
+                    align-items: center;
+                }
+
+                &__icon {
+                    display: inline-block;
+                    width: 45px;
+                    height: 45px;
+                    border-radius: 50%;
+
+                    &--purple {
+                        background-color: #5726DF;
+                    }
+
+                    &--pink {
+                        background-color: v.$color-muted;
+                    }
+
+                    &--orange {
+                        background-color: #FFB265;
+                    }
+
+                    &--green {
+                        background-color: v.$color-sub-btn;
+                    }
+                }
+
+                &__info {
+                    font: v.$fw-semibold v.$fs-body v.$font-lato;
+                    line-height: 25.6px;
+                    color: v.$color-sub-text-color;
+                }
+            }
+        }
+
+        // card-form
+        &__card--form {
+            max-width: 534px;
+            padding-top: 30px;
+
+            h2 {
+                margin-bottom: 15px;
+            }
+
+            p {
+                margin-bottom: 30px;
+            }
+
+            .contact-form {
+                max-width: 534px;
+
+                &__row {
+                    display: flex;
+                    justify-content: space-between;
+                    gap: 24px;
+                    margin-bottom: 34px;
+                }
+
+                &__input {
+                    border: 1px solid #A4B6C8B2;
+                    border-radius: 1px;
+                    height: 45px;
+                    width: 100%;
+                    padding-left: 11px;
+                    outline: none;
+
+                    &::placeholder {
+                        font: v.$fw-regular v.$fs-body v.$font-lato ;
+                        line-height: 100%;
+                        letter-spacing: 0.01em;
+                        color: v.$color-sub-text-color;
+                    }
+
+                    &.subject {
+                        margin-bottom: 47px;
+                    }
+                }
+
+                &__textarea {
+                    width: 100%;
+                    border: 1px solid #A4B6C8B2;
+                    height: 160px;
+                    resize: none;
+                    outline: none;
+                    padding-top: 17px;
+                    padding-left: 11px;
+
+                    &::placeholder {
+                        font: v.$fw-regular v.$fs-body v.$font-lato ;
+                        line-height: 100%;
+                        letter-spacing: 0.01em;
+                        color: v.$color-sub-text-color;
+                    }
+                }
+
+                &__btn {
+                    margin-top: 25px;
+                    max-width: 157px;
+                    width: 100%;
+                    height: 44px;
+                    font-weight: v.$fw-regular;
+                    line-height: 25.6px;
+                    border-radius: 3px;
+                    @include mixin.transition-regular();
+                    @include mixin.hover-btn-p();
+                }
+            }
+        }
+
+        // card-art 
+        &__card--art {
+            width: 60%;
+            aspect-ratio: calc(723/692);
+        }
+
+        &__art {
+            width: 100%;
+            height: 100%;
+
+        }
+    }
+
+    @media (max-width:992px) {
+        .contact-grid {
+            &__layout {
+                grid-template-columns: 1fr;
+            }
+
+            &__card--about {
+                margin-right: 0;
+            }
+
+            &__card--way {
+                margin-left: 0;
+            }
+            &__card--art{
+                display: none;
+            }
+        }
+
+    }
+    @media (max-width:576px) {
+        .contact-grid{
+            &__card--way{
+                .contact-way{
+                    grid-template-columns: 1fr;
+                }
+            }
+            &__card--form{
+                .contact-form{
+                    &__row{
+                        flex-direction: column;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,160 @@
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins" as mixin;
+
+#about-us {
+    .about-hero {
+        margin-top: 120px;
+        margin-bottom: 150px;
+
+        &__grid {
+            display: flex;
+            gap: 45px;
+            align-items: center;
+        }
+
+        &__media {
+            flex-grow: 1;
+        }
+
+        &__frame {
+            background-color: #2B3CAB;
+            width: 100%;
+            height: 400px;
+            position: relative;
+            border-radius: 6px;
+        }
+
+        &__img {
+            position: absolute;
+            top: -3px;
+            left: 15px;
+            width: 100%;
+            height: 97%;
+            object-fit: cover;
+            border-radius: 6px;
+            transform: scale(0.99);
+        }
+
+        &__content {
+            max-width: 550px;
+        }
+
+        &__title {
+            font-size: 36px;
+            line-height: 48px;
+            color: v.$color-title;
+            margin-bottom: 14px;
+        }
+
+        &__text {
+            font: v.$fw-semibold v.$fs-body v.$font-lato;
+            line-height: 25.6px;
+            color: v.$color-sub-text-color;
+            margin-bottom: 80px;
+        }
+
+        &__btn {
+            max-width: 145px;
+            height: 44px;
+            padding: 0;
+            border-radius: 3px;
+            @include mixin.transition-regular();
+            @include mixin.hover-btn-p();
+        }
+
+
+        @media (max-width:992px) {
+            &__grid {
+                flex-direction: column;
+            }
+
+            &__media {
+                width: 100%;
+            }
+        }
+    }
+
+    .section-title {
+        text-align: center;
+        margin-bottom: 65px;
+    }
+
+    // features
+    .features {
+        margin-bottom: 135px;
+
+        &-list {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+
+            .features-item {
+                box-shadow: 0px 8px 40px 0px rgba(49, 32, 138, 0.05);
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding-top: 61px;
+                padding-bottom: 45px;
+                cursor: pointer;
+                @include mixin.transition-regular();
+                &:hover {
+                    border-bottom: 2px solid #FF9100;
+                }
+
+                &__icon {
+                    width: 65px;
+                    height: 65px;
+                    margin-bottom: 22px;
+                }
+
+                &__title {
+                    font-size: 22px;
+                    font-weight: v.$fw-semibold;
+                    line-height: 100%;
+                    color: v.$color-title;
+                    font-family: v.$font-josefin;
+                    margin-bottom: 20px;
+                }
+
+                &__text {
+                    max-width: 80%;
+                    font-size: v.$fs-body;
+                    font-family: v.$font-lato;
+                    color: rgba(26, 11, 91, 0.3);
+                    line-height: 25.6px;
+                    text-align: center;
+                }
+            }
+        }
+    }
+
+    // testimonials
+    .testimonials{  
+        display: flex;
+        justify-content: center;
+        &__container{
+            text-align: center;
+            max-width: 689px;
+        }
+        &__avts{
+            
+        }
+    }
+
+    @media (max-width:v.$breakpoints-xl) {
+        .features {
+            &-list {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    }
+
+    @media (max-width:v.$breakpoints-sm) {
+        .features {
+            &-list {
+                grid-template-columns: repeat(1, 1fr);
+            }
+        }
+
+    }
+}
