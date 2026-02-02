@@ -87,3 +87,7 @@
         }
     }
 }
+
+.logo-brands{
+    @include mixin.brands();
+}
