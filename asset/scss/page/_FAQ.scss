@@ -1,0 +1,102 @@
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins" as mixin;
+
+.faq {
+    margin-top: 134px;
+
+    &__grid {
+        display: flex;
+        gap: 100px;
+    }
+
+    &__title {
+        font-size: 36px;
+        line-height: 30px;
+        color: v.$color-title;
+        margin-bottom: 64px;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 65px;
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    &__q {
+        font-size: 17px;
+        line-height: 30px;
+        color: v.$color-title;
+    }
+
+    &__a {
+        font: v.$fw-regular v.$fs-body v.$font-josefin;
+        color: v.$color-sub-text-color;
+    }
+
+    &__aside {
+        max-width: 566px;
+        width: 100%;
+        background-color: v.$color-bg-card;
+        border-radius: 1px;
+        padding: 42px 62px 75px;
+
+        .question-box {
+            &__title {
+                font-size: 24px;
+                line-height: 30px;
+                color: v.$color-title;
+                margin-bottom: 114px;
+            }
+
+            &__form {
+                display: flex;
+                flex-direction: column;
+                gap: 35px;
+            }
+
+            &__input {
+                outline: none;
+                height: 50px;
+                padding-left: 10px;
+                border-radius: 5px;
+                border: 1px solid #CDCEDC;
+
+                &::placeholder {
+                    font: v.$fw-semibold v.$fs-body v.$font-lato;
+                    color: v.$color-sub-text-color;
+                }
+            }
+
+            &__textarea {
+                border: 1px solid #CDCEDC;
+                height: 197px;
+                resize: none;
+                padding: 11px 8px;
+                &::placeholder {
+                    font: v.$fw-semibold v.$fs-body v.$font-lato;
+                    color: v.$color-sub-text-color;
+                }
+            }
+            &__btn{
+                max-width: 156px;
+                height: 48px;
+                border-radius: 3px;
+                @include mixin.transition-regular();
+                @include mixin.hover-btn-p();
+            }
+        }
+    }
+    @media (max-width:992px) {
+        &__grid{
+            flex-direction: column;
+            align-items: center;
+        }
+        
+    }
+}
