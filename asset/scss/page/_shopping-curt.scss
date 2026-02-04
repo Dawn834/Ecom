@@ -173,6 +173,7 @@
             margin-bottom: 42px;
             text-align: center;
             font-size: 20px;
+            color: v.$color-title;
         }
 
         &__box {
@@ -198,11 +199,13 @@
         &__label {
             font-weight: v.$fw-semibold;
             font-size: 18px;
+            color: v.$color-title;
         }
 
         &__value {
             font-weight: v.$fw-regular;
             font-size: v.$fs-body;
+            color: v.$color-title;
         }
 
         &__note {
@@ -243,6 +246,7 @@
             margin: 32px 0 26px;
             font-size: 20px;
             text-align: center;
+            color: v.$color-title;
         }
 
         &__form {
@@ -263,6 +267,11 @@
             font-size: 14px;
             font-weight: v.$fw-semibold;
             outline: none;
+
+            &::placeholder {
+                color: #C5CBE3;
+
+            }
         }
 
         &__btn {

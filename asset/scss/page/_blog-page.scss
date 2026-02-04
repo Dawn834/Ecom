@@ -158,10 +158,6 @@
         max-width: 270px;
         width: 100%;
 
-        .filter-item.active {
-            color: v.$color-muted;
-        }
-
         .sidebar-box {
             margin-bottom: 37px;
 
@@ -211,7 +207,10 @@
                 color: v.$color-title;
                 text-align: left;
                 @include mixin.transition-regular();
-
+                &.active{
+                    background-color: v.$color-muted;
+                    color: v.$color-white;
+                }
                 &:hover {
                     color: v.$color-muted;
                 }

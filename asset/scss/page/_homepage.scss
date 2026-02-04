@@ -1610,7 +1610,10 @@
                 }
 
                 .btn {
+                    cursor: pointer;
                     padding: 10px 20px;
+                    @include mixin.transition-regular();
+                    @include mixin.hover-btn-p();
                 }
             }
         }

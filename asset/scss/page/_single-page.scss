@@ -123,10 +123,6 @@
         max-width: 270px;
         width: 100%;
 
-        .filter-item.active {
-            color: v.$color-muted;
-        }
-
         .sidebar-box {
             margin-bottom: 37px;
 
@@ -169,6 +165,7 @@
             }
 
             &__chip {
+                padding-left: 9px;
                 font: v.$fw-regular v.$fs-small v.$font-josefin;
                 max-width: 122px;
                 width: 100%;

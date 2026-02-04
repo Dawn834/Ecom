@@ -97,6 +97,7 @@
                 padding-bottom: 45px;
                 cursor: pointer;
                 @include mixin.transition-regular();
+
                 &:hover {
                     border-bottom: 2px solid #FF9100;
                 }
@@ -129,15 +130,55 @@
     }
 
     // testimonials
-    .testimonials{  
+    .testimonials {
         display: flex;
         justify-content: center;
-        &__container{
+
+        &__container {
             text-align: center;
             max-width: 689px;
         }
-        &__avts{
-            
+
+        &__avts {
+            display: flex;
+            gap: 13px;
+            justify-content: center;
+            align-items: flex-end;
+            margin-bottom: 25px;
+        }
+
+        &__avt {
+            width: 55px;
+            height: 55px;
+
+            &.active {
+                height: 59px;
+                margin-bottom: 10px;
+            }
+
+            &-img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+        &__info{
+            margin-bottom: 14px;
+        }
+        &__name {
+            font: v.$fw-semibold v.$fs-h4 v.$font-lato;
+            line-height: 25.6px;
+        }
+        &__role{
+            font: v.$fw-semibold 10px v.$font-lato;
+            line-height: 25.6px;
+            color: v.$color-sub-text-color;
+        }
+        &__quote{
+            font: v.$fw-bold v.$fs-body v.$font-lato;
+            line-height: 25.6px;
+            text-align: center;
+            color: v.$color-sub-text-color;
         }
     }
 
