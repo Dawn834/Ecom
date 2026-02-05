@@ -297,34 +297,59 @@
         <section id="product-detail">
             <section class="product-summary container">
                 <div class="product-summary__grid">
-                    <!-- Thumbnails -->
-                    <div class="product-summary__thumbs">
-                        <button class="product-summary__thumb is-active" type="button" aria-label="View image 1">
-                            <img class="product-summary__thumb-img"
-                                src="./asset/img/product-detail/product-summary/03da029b0a8cccaf41b91c6f0575413c23965b0d.jpg"
-                                alt="" />
-                        </button>
+                    <!-- Thumbs Swiper -->
+                    <div thumbsSlider class="swiper-container mySwiper1">
+                        <div class="product-summary__thumbs swiper-wrapper">
+                            <button class="product-summary__thumb swiper-slide is-active" type="button"
+                                aria-label="View image 1">
+                                <img class="product-summary__thumb-img"
+                                    src="./asset/img/product-detail/product-summary/03da029b0a8cccaf41b91c6f0575413c23965b0d.jpg"
+                                    alt="" />
+                            </button>
 
-                        <button class="product-summary__thumb" type="button" aria-label="View image 2">
-                            <img class="product-summary__thumb-img"
-                                src="./asset/img/product-detail/product-summary/ecbeac3fa9e2004573e1a08397ce10b25d96422c.jpg"
-                                alt="" />
-                        </button>
+                            <button class="product-summary__thumb swiper-slide" type="button" aria-label="View image 2">
+                                <img class="product-summary__thumb-img"
+                                    src="./asset/img/product-detail/product-summary/ecbeac3fa9e2004573e1a08397ce10b25d96422c.jpg"
+                                    alt="" />
+                            </button>
 
-                        <button class="product-summary__thumb" type="button" aria-label="View image 3">
-                            <img class="product-summary__thumb-img"
-                                src="./asset/img/product-detail/product-summary/848b90941cd9a4e9bebaa6cfba09c590bd700c1b.jpg"
-                                alt="" />
-                        </button>
+                            <button class="product-summary__thumb swiper-slide" type="button" aria-label="View image 3">
+                                <img class="product-summary__thumb-img"
+                                    src="./asset/img/product-detail/product-summary/848b90941cd9a4e9bebaa6cfba09c590bd700c1b.jpg"
+                                    alt="" />
+                            </button>
+                        </div>
                     </div>
 
                     <!-- Main image -->
-                    <div class="product-summary__media">
-                        <a class="product-summary__media-link" href="#" aria-label="Open gallery">
-                            <img class="product-summary__image"
-                                src="./asset/img/product-detail/product-summary/5e2937d7bae8dbd83e04e7a1c34f5c4b911eba0d.jpg"
-                                alt="Product image" />
-                        </a>
+
+                    <div style="--swiper-navigation-color:#fff;--swiper-pagination-color:#fff"
+                        class="swiper-container mySwiper2">
+                        <div class="swiper-wrapper">
+                            <div class="product-summary__media swiper-slide">
+                                <a class="product-summary__media-link" href="#" aria-label="Open gallery">
+                                    <img class="product-summary__image"
+                                        src="./asset/img/product-detail/product-summary/5e2937d7bae8dbd83e04e7a1c34f5c4b911eba0d.jpg"
+                                        alt="Product image" />
+                                </a>
+                            </div>
+                            <div class="product-summary__media swiper-slide">
+                                <a class="product-summary__media-link" href="#" aria-label="Open gallery">
+                                    <img class="product-summary__image"
+                                        src="./asset/img/product-detail/product-summary/ecbeac3fa9e2004573e1a08397ce10b25d96422c.jpg"
+                                        alt="Product image" />
+                                </a>
+                            </div>
+                            <div class="product-summary__media swiper-slide">
+                                <a class="product-summary__media-link" href="#" aria-label="Open gallery">
+                                    <img class="product-summary__image"
+                                        src="./asset/img/product-detail/product-summary/848b90941cd9a4e9bebaa6cfba09c590bd700c1b.jpg"
+                                        alt="Product image" />
+                                </a>
+                            </div>
+                        </div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
                     </div>
 
                     <!-- Info -->
@@ -926,6 +951,32 @@
         </div>
     </footer>
     <script src="./asset/script.js"> </script>
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <!-- Initialize Swiper -->
+    <script>
+        // Thumbs (right) - vertical list
+        var swiper = new Swiper(".mySwiper1", {
+            direction: "vertical",
+            spaceBetween: 10,
+            slidesPerView: 3,
+            freeMode: true,
+            watchSlidesProgress: true
+        });
+
+        // Main (left)
+        var swiper2 = new Swiper(".mySwiper2", {
+            loop: true,
+            spaceBetween: 10,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev"
+            },
+            thumbs: {
+                swiper: swiper
+            }
+        });
+    </script>
 </body>
 
 </html>
