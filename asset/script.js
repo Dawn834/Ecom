@@ -289,6 +289,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const oneViewEl = document.querySelector(".mySwiper-1view");
     if (oneViewEl) {
         new Swiper(".mySwiper-1view", {
+            spaceBetween: 40,
             pagination: {
                 el: ".swiper-pagination",
             },

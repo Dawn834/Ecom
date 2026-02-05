@@ -133,10 +133,12 @@
     .testimonials {
         display: flex;
         justify-content: center;
-
+        background-color: #FBFBFF;
         &__container {
             text-align: center;
             max-width: 689px;
+            width: 100%;
+            margin: 70px 0;
         }
 
         &__avts {
@@ -162,23 +164,55 @@
                 object-fit: cover;
             }
         }
-        &__info{
+
+        &__info {
             margin-bottom: 14px;
         }
+
         &__name {
             font: v.$fw-semibold v.$fs-h4 v.$font-lato;
             line-height: 25.6px;
         }
-        &__role{
+
+        &__role {
             font: v.$fw-semibold 10px v.$font-lato;
             line-height: 25.6px;
             color: v.$color-sub-text-color;
         }
-        &__quote{
+
+        &__quote {
             font: v.$fw-bold v.$fs-body v.$font-lato;
             line-height: 25.6px;
             text-align: center;
             color: v.$color-sub-text-color;
+        }
+    }
+
+    // swiper
+    .mySwiper-1view {
+        overflow: hidden;
+        padding-bottom: 30px;
+        position: relative;
+    }
+    .swiper-slide{
+        cursor: pointer;
+    }
+    .swiper-pagination {
+        bottom: -5px;
+
+        &-bullet {
+            width: 16px;
+            height: 4px;
+            border-radius: 16px;
+            background: v.$color-muted;
+            opacity: .35;
+            transition: all 0.2s ease;
+        }
+
+        &-bullet-active {
+            width: 24px;
+            background: v.$color-btn;
+            opacity: 1;
         }
     }
 

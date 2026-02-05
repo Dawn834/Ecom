@@ -83,10 +83,12 @@ header {
                 min-width: 150px;
                 background-color: v.$color-bg-main-header;
                 display: none;
+
                 &__item {
                     padding: 15px 10px;
                     cursor: pointer;
                     margin-bottom: 2px;
+                    cursor: pointer;
                 }
 
                 &__item:hover {
@@ -164,6 +166,7 @@ header {
                     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
                     min-width: 150px;
                     z-index: 1000;
+
                     &__item {
                         padding: 15px;
 
@@ -196,6 +199,7 @@ header {
             right: 10px;
 
             input {
+                padding-left: 10px;
                 width: 266px;
                 height: 100%;
                 border: 2px solid rgba(231, 230, 239, 1);
@@ -279,9 +283,10 @@ header {
                     right: 10px;
                     cursor: pointer;
                     @include mixin.transition-regular();
+
                     &:hover {
                         scale: 0.95;
-                    }   
+                    }
                 }
             }
 

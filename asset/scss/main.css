@@ -261,6 +261,7 @@ header .user-actions__item .dropdown-menu__item {
   padding: 15px 10px;
   cursor: pointer;
   margin-bottom: 2px;
+  cursor: pointer;
 }
 header .user-actions__item .dropdown-menu__item:hover {
   background-color: rgb(126, 51, 224);
@@ -338,6 +339,7 @@ header .main-header .search-box {
   right: 10px;
 }
 header .main-header .search-box input {
+  padding-left: 10px;
   width: 266px;
   height: 100%;
   border: 2px solid rgb(231, 230, 239);
@@ -4281,10 +4283,13 @@ footer .footer__nav-list .footer__nav-item:hover {
 #about-us .testimonials {
   display: flex;
   justify-content: center;
+  background-color: #FBFBFF;
 }
 #about-us .testimonials__container {
   text-align: center;
   max-width: 689px;
+  width: 100%;
+  margin: 70px 0;
 }
 #about-us .testimonials__avts {
   display: flex;
@@ -4324,6 +4329,30 @@ footer .footer__nav-list .footer__nav-item:hover {
   line-height: 25.6px;
   text-align: center;
   color: rgb(138, 143, 185);
+}
+#about-us .mySwiper-1view {
+  overflow: hidden;
+  padding-bottom: 30px;
+  position: relative;
+}
+#about-us .swiper-slide {
+  cursor: pointer;
+}
+#about-us .swiper-pagination {
+  bottom: -5px;
+}
+#about-us .swiper-pagination-bullet {
+  width: 16px;
+  height: 4px;
+  border-radius: 16px;
+  background: rgb(251, 46, 134);
+  opacity: 0.35;
+  transition: all 0.2s ease;
+}
+#about-us .swiper-pagination-bullet-active {
+  width: 24px;
+  background: rgb(251, 46, 134);
+  opacity: 1;
 }
 @media (max-width: 1100px) {
   #about-us .features-list {
