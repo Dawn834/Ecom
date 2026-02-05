@@ -1270,6 +1270,7 @@
     // leastest blog
     .leatest-blog {
         .section-title {
+            margin-top: 100px;
             margin-bottom: 80px;
         }
 
@@ -1279,6 +1280,7 @@
         }
 
         &__card {
+            width: 100%;
             color: v.$color-title;
             box-shadow: 0px 8px 40px 0px rgba(49, 32, 138, 0.05);
             border-radius: 5px;
@@ -1601,7 +1603,12 @@
                 }
             }
         }
-
+        // discount-section
+        .discount-section{
+            .js-tab-btn{
+                font-size: v.$fs-small;
+            }
+        }
         // cta section
         .newsletter {
             &-cta {
