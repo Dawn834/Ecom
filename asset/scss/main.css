@@ -2615,6 +2615,7 @@ footer .footer__nav-list .footer__nav-item:hover {
 }
 #grid-default .product-list .product-row__media {
   max-width: 313px;
+  width: 100%;
   max-height: 217px;
   overflow: hidden;
 }
