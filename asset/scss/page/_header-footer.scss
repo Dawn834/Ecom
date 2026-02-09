@@ -541,6 +541,35 @@ footer {
         }
     }
 
+    .footer-bottom {
+        background-color: #E7E4F8;
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            padding: 17px 100px;
+
+            p {
+                font: v.$fw-semibold v.$fs-body v.$font-lato;
+                line-height: 100%;
+                color: #9DA0AE;
+            }
+        }
+
+        &__link {
+            display: flex;
+            gap: 10px;
+
+            a {
+                @include mixin.transition-regular();
+
+                &:hover {
+                    transform: scale(1.1);
+                }
+            }
+        }
+    }
+
     // responsive footer
     @media (max-width:1200px) {
         .footer {
@@ -574,6 +603,12 @@ footer {
                 }
             }
 
+        }
+
+        .footer-bottom{
+            .container{
+                padding: 17px 10px;
+            }
         }
 
     }
